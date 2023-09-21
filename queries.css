@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* CSS styles for extra-large screens */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   /* Add your CSS styles for extra-large screens here */
@@ -53,12 +60,22 @@
   }
 
   .testimonial__author {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 2rem auto;
+    -ms-grid-columns: 6.5rem 2rem 1fr;
     grid-template-columns: 6.5rem 1fr;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
     column-gap: 2rem;
 
+    -webkit-box-pack: end;
+
+    -ms-flex-pack: end;
+
     justify-content: end;
+    -ms-flex-line-pack: distribute;
     align-content: space-around;
   }
   .address__home {
@@ -107,6 +124,8 @@
   }
 
   .testimonial__author {
+    -webkit-column-gap: 0rem;
+    -moz-column-gap: 0rem;
     column-gap: 0rem;
   }
 
@@ -147,6 +166,8 @@
   }
 
   .header__img {
+    -webkit-transform: translateY(0rem);
+    -ms-transform: translateY(0rem);
     transform: translateY(0rem);
   }
 
@@ -156,15 +177,24 @@
 
   .header__title-m {
     /* background: red; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     gap: 2rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 2rem;
   }
 
   .features-m {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 4rem;
     margin: 0;
@@ -172,14 +202,24 @@
 
   .features__feature-m {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 2rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
   .features__icon-m {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     background-color: var(--color-secondary-opacity);
     height: 5rem;
@@ -198,8 +238,15 @@
   .header {
     padding: 0 3rem;
     height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
@@ -218,7 +265,7 @@
   }
 
   .section {
-    padding: 5rem 1rem;
+    padding: 5rem 3rem;
   }
   .section__header {
     font-size: 1.5rem;
@@ -240,8 +287,14 @@
   }
 
   .operations__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 5rem;
     width: 5rem;
@@ -249,8 +302,12 @@
   }
 
   .operations__content--active {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 7rem 0rem 1fr;
     grid-template-columns: 7rem 1fr;
+    -webkit-column-gap: 0rem;
+    -moz-column-gap: 0rem;
     column-gap: 0rem;
     row-gap: 1.5rem;
   }
@@ -307,19 +364,31 @@
 
   .nav {
     position: relative;
+    -webkit-transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
     padding: 0;
   }
 
   .nav__links-m {
-    position: absolute;
+    position: fixed;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     top: 0rem;
+    left: 0;
     width: 100%;
     height: 30rem;
     background-color: var(--color-primary-opacity);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding: 4rem 0;
 
@@ -337,6 +406,8 @@
   .nav__links-m--close {
     top: -30rem;
     visibility: hidden;
+    -webkit-transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
