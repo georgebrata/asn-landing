@@ -36,7 +36,7 @@ body {
 /* GENERAL ELEMENTS */
 .section {
   padding: 7rem 3rem;
-  border-top: 1px solid var(--color-secondary);
+  border-top: 0.5px solid var(--color-primary-opacity);
 
   transition: transform 1s, opacity 1s;
 }
@@ -136,13 +136,15 @@ img {
 .nav.sticky {
   position: fixed;
   background-color: var(--color-primary);
+
   .nav__link {
-    color: #fff;
+    color: #f3f3f3 !important;
   }
   .nav__link--btn {
     color: var(--color-primary);
     background-color: var(--color-secondary);
     position: relative;
+    color: var(--color-primary) !important;
   }
 }
 
@@ -362,6 +364,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
   height: 7rem;
   width: 7rem;
   border-radius: 50%;
@@ -743,4 +746,5 @@ h4 {
   fill: var(--color-secondary);
   stroke: var(--color-primary-opacity);
   width: 4rem;
+  outline: none;
 }
