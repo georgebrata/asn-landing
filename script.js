@@ -311,3 +311,49 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+const menu = document.querySelector('.nav__links-m');
+const toggleButton = document.getElementById('toggleButton-close');
+
+// Add a click event listener to the toggle button
+toggleButton.addEventListener('click', function () {
+  // Toggle the visibility of the menu
+  if (menu.classList.contains('nav__links-m--close')) {
+    menu.classList.remove('nav__links-m--close');
+
+    const newSVGContentClose = `
+     <svg
+            class="btn-close__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            id="cancel"
+          >
+            <path
+              d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"
+            />
+          </svg>
+    `;
+
+    while (toggleButton.firstChild) {
+      toggleButton.removeChild(toggleButton.firstChild);
+    }
+    // Step 4: Append the new SVG content to the parent element
+    toggleButton.innerHTML = newSVGContentClose;
+  } else {
+    menu.classList.add('nav__links-m--close');
+
+    // Step 1: Create or load the new SVG content
+    const newSVGContentMenu = `
+  <svg class="btn-close__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="menu"><path d="M12,7a2,2,0,1,0-2-2A2,2,0,0,0,12,7Zm0,10a2,2,0,1,0,2,2A2,2,0,0,0,12,17Zm0-7a2,2,0,1,0,2,2A2,2,0,0,0,12,10Z"/></svg>
+`;
+
+    // Step 2: Get a reference to the parent element
+
+    // Step 3: Remove the existing children from the parent element
+    while (toggleButton.firstChild) {
+      toggleButton.removeChild(toggleButton.firstChild);
+    }
+    // Step 4: Append the new SVG content to the parent element
+    toggleButton.innerHTML = newSVGContentMenu;
+  }
+});
