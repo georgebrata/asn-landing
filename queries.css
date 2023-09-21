@@ -1,0 +1,80 @@
+/* CSS styles for extra-large screens */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* Add your CSS styles for extra-large screens here */
+}
+
+/* CSS styles for large screens */
+@media (max-width: 1199.98px) {
+  /* Add your CSS styles for large screens here */
+  body {
+    line-height: 1.5;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 1.35;
+  }
+  h4 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .header-container p {
+    font-size: 1.4rem;
+  }
+
+  .section__header {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+  .operations__content {
+    display: none;
+    font-size: 1.4rem;
+    padding: 2.5rem 7rem 6.5rem 7rem;
+  }
+  .features__header {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .features__feature {
+    font-size: 1.4rem;
+    padding: 1.5rem;
+  }
+
+  .testimonial__text {
+    width: 50%;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .testimonial__author {
+    width: fit-content;
+    margin: 2rem auto;
+    grid-template-columns: 6.5rem 1fr;
+    column-gap: 2rem;
+
+    justify-content: end;
+    align-content: space-around;
+  }
+  .address__home {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* CSS styles for medium screens */
+@media (max-width: 991.98px) {
+  /* Add your CSS styles for medium screens here */
+}
+
+/* CSS styles for small screens */
+@media (max-width: 767.98px) {
+  /* Add your CSS styles for small screens here */
+}
+
+/* CSS styles for extra small screens */
+@media (max-width: 575.98px) {
+  /* Add your CSS styles for extra small screens here */
+}
