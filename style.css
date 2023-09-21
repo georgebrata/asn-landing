@@ -740,11 +740,12 @@ h4 {
   display: none;
   position: relative;
   z-index: 3000;
+  outline: none;
+  background-color: var(--color-secondary-opacity);
 }
 
 .btn-close__icon {
   fill: var(--color-secondary);
   stroke: var(--color-primary-opacity);
   width: 4rem;
-  outline: none;
 }

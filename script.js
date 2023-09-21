@@ -52,35 +52,8 @@ btnScrollTo.addEventListener('click', function (e) {
     document.documentElement.clientWidth
   );
 
-  // Scrolling
-  // window.scrollTo(
-  //   s1coords.left + window.pageXOffset,
-  //   s1coords.top + window.pageYOffset
-  // );
-
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset,
-  //   top: s1coords.top + window.pageYOffset,
-  //   behavior: 'smooth',
-  // });
-
   section1.scrollIntoView({ behavior: 'smooth' });
 });
-
-///////////////////////////////////////
-// Page navigation
-
-// document.querySelectorAll('.nav__link').forEach(function (el) {
-//   el.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     const id = this.getAttribute('href');
-//     console.log(id);
-//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-//   });
-// });
-
-// 1. Add event listener to common parent element
-// 2. Determine what element originated the event
 
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
@@ -293,23 +266,31 @@ const dot = document.querySelector('.dot');
 dot.style.display = 'inline';
 
 document.addEventListener('DOMContentLoaded', function () {
-  const toggleButton = document.getElementById('toggleButton');
-  const hiddenContent = document.querySelector('.hidden-text');
+  const toggleButton = document.getElementsByClassName('toggleButton');
 
-  toggleButton.addEventListener('click', function () {
-    if (
-      hiddenContent.style.display === 'none' ||
-      hiddenContent.style.display === ''
-    ) {
-      hiddenContent.style.display = 'inline';
-      toggleButton.textContent = 'Read Less';
-      dot.style.display = 'none';
-    } else {
-      hiddenContent.style.display = 'none';
-      toggleButton.textContent = 'Read More';
-      dot.style.display = 'inline';
-    }
-  });
+  console.log(toggleButton);
+  const hiddenContent = document.querySelectorAll('.hidden-text');
+  const [content1, content2] = [...hiddenContent];
+
+  [...toggleButton].forEach(btn =>
+    btn.addEventListener('click', function () {
+      console.log(this);
+      if (
+        content2.classList.contains('hidden-text') ||
+        content1.classList.remove('hidden-text')
+      ) {
+        content2.classList.remove('hidden-text');
+        content1.classList.remove('hidden-text');
+        btn.textContent = 'Read Less';
+        dot.style.display = 'none';
+      } else {
+        content2.classList.add('hidden-text');
+        content1.classList.add('hidden-text');
+        btn.textContent = 'Read More';
+        dot.style.display = 'inline';
+      }
+    })
+  );
 });
 
 const menu = document.querySelector('.nav__links-m');
