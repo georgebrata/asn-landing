@@ -9,6 +9,10 @@
   body {
     line-height: 1.5;
   }
+
+  p {
+    padding-right: 0rem;
+  }
   h1 {
     font-size: 3rem;
     line-height: 1.35;
@@ -28,7 +32,6 @@
     font-weight: 500;
   }
   .operations__content {
-    display: none;
     font-size: 1.4rem;
     padding: 2.5rem 7rem 6.5rem 7rem;
   }
@@ -43,7 +46,7 @@
   }
 
   .testimonial__text {
-    width: 50%;
+    width: 80%;
     font-size: 1.4rem;
     margin: 0 auto;
     text-align: center;
@@ -62,6 +65,13 @@
     width: 80%;
     margin: 0 auto;
   }
+  .section__title {
+    margin: 0 auto 2rem auto;
+    font-size: 1.7rem;
+  }
+  .address {
+    margin-top: 4rem;
+  }
 }
 
 /* CSS styles for medium screens */
@@ -72,6 +82,58 @@
 /* CSS styles for small screens */
 @media (max-width: 767.98px) {
   /* Add your CSS styles for small screens here */
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.35;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  .features {
+    margin: 0 0rem;
+  }
+
+  .section__header {
+    font-size: 1.8rem;
+  }
+
+  .btn,
+  .section--sign-up .btn {
+    font-size: 1.4rem;
+    padding: 1.05rem 2.5rem;
+  }
+
+  .testimonial__author {
+    column-gap: 0rem;
+  }
+
+  .testimonial__photo {
+    width: 5rem;
+    height: 5rem;
+  }
+  .testimonial__name {
+    font-size: 1.4rem;
+  }
+
+  .testimonial__location {
+    font-size: 1.2rem;
+  }
+  .section__title {
+    margin: 0 auto 2rem auto;
+    font-size: 1.7rem;
+  }
+  .address {
+    margin-top: 4rem;
+  }
+
+  .header-container p {
+    font-size: 1.3rem;
+    width: 90%;
+    display: inline-block;
+  }
 }
 
 /* CSS styles for extra small screens */
