@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
     <title>ASN | Milioane de Clienți își fac deja viața mai simplă.</title>
 
     <script defer src="script.js"></script>
@@ -29,6 +30,34 @@
           data-version-number="3.0"
         />
         <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">Servicii</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">Desprei</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">Mărturii</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-modal" href="#"
+              >Contactaţi-ne</a
+            >
+          </li>
+        </ul>
+        <button id="toggleButton-close">
+          <svg
+            class="btn-close__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            id="cancel"
+          >
+            <path
+              d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"
+            />
+          </svg>
+        </button>
+        <ul class="nav__links nav__links-m nav__links-m--close">
           <li class="nav__item">
             <a class="nav__link" href="#section--1">Servicii</a>
           </li>
@@ -87,10 +116,66 @@
               pentru zbor anulat Interviu: Erorile statului rămân o realitate în
               România anului 2023
             </span>
-            <button class="btn btn--small" id="toggleButton">Read More</button>
+            <button class="btn--text btn--text--small toggleButton" id="">
+              Read More
+            </button>
           </p>
         </div>
         <button class="btn--text btn--scroll-to">Mai mult &DownArrow;</button>
+        <img
+          src="img/hero.jpg"
+          class="header__img"
+          alt="Minimalist bank items"
+        />
+      </div>
+
+      <div class="header__title header__title-m">
+        <div class="header-container-m">
+          <h1>
+            Sebastian Nagy
+            <!-- Green highlight effect -->
+            <span class="highlight">Specializat</span>
+            în<br />
+            <span class="highlight">drept</span> penal / drept civil
+          </h1>
+          <h4>Bun venit pe pagina oficială a avocatului Sebastian Nagy.</h4>
+          <p>
+            <span class="header__desc">
+              un profesionist tânăr și ambițios specializat în diverse ramuri
+              ale dreptului. Alegerea perfectă pentru a vă oferi asistență și
+              reprezentare juridică de încredere. De la momentul înființări și
+              pana în prezent am demonstrat prin numeroasele reușite
+              profesionale și clienți mulțumiți faptul ca, oferim servicii
+              juridice de înaltă calitate în diverse ramuri ale dreptului.
+              Astfel, pasiunea pentru drept, determinarea, accentul deosebit pus
+              pe nevoile și interesele clienților precum și vastele cunoștințe
+              juridice sunt doar câteva dintre atributele care ne definesc munca
+              și ne recomanda pentru o colaborare încununată de succes
+              <span class="dot">...</span>
+            </span>
+            <span class="hidden-text">
+              <br />
+              Avocat Sebastian Nagy este un absolvent de top al Facultății de
+              Drept din Cluj-Napoca și este cunoscut pe plan local pentru
+              pasiunea sa de a face diferența în domeniul juridic. În timpul
+              facultății, Sebastian a primit numeroase premii și distincţii. S-a
+              remarcat în mod deosebit prin implicarea sa în cadrul proiectului
+              “Educație juridica în scoli”, demonstrându-și abilitatea de a
+              explica și dezbate conceptele juridice într-un mod accesibil
+              pentru elevi. Pasiunea pentru un act de justiție de calitate l-a
+              împins pe Sebastian Nagy sa fie prezent în mod constant în presa
+              locală și națională, contribuind cu expertiza sa în educatia
+              juridica a intregii societati. <br />
+              Compensatie daune materiale si daune morale acordate unor clujeni
+              pentru zbor anulat Interviu: Erorile statului rămân o realitate în
+              România anului 2023
+            </span>
+            <button class="btn--text btn--text--small toggleButton" id="">
+              Read More
+            </button>
+          </p>
+          <button class="btn--text btn--scroll-to">Mai mult &DownArrow;</button>
+        </div>
         <img
           src="img/hero.jpg"
           class="header__img"
@@ -215,6 +300,129 @@
           </p>
         </div>
       </div>
+      <div class="features features-m">
+        <img
+          src="img/digital-lazy.jpg"
+          data-src="img/law-1.jpg"
+          alt="Computer"
+          class="features__img features__img-m lazy-img"
+        />
+        <div class="features__feature features__feature-m">
+          <div class="features__icon features__icon-m">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-monitor"></use>
+            </svg>
+          </div>
+          <div class="features__deatail-cont">
+            <h5 class="features__header">Cabinetul oferă servicii juridice</h5>
+            <p>
+              Avocatul Sebastian Nagy Cabinetul oferă servicii juridice în
+              diverse domenii de drept, adaptate nevoilor specifice
+              dumneavoastră.
+            </p>
+          </div>
+        </div>
+        <img
+          src="img/grow-lazy.jpg"
+          data-src="img/law-2.jpg"
+          alt="Plant"
+          class="features__img lazy-img"
+        />
+        <div class="features__feature features__feature-m">
+          <div class="features__icon features__icon-m">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-trending-up"></use>
+            </svg>
+          </div>
+          <div class="features__deatail-cont">
+            <h5 class="features__header">Drept Pena</h5>
+            <p>
+              Apărare și reprezentare în dosare penale, asigurându-se că
+              drepturile și interesele clienților săi sunt protejate cu
+              fermitate
+            </p>
+          </div>
+        </div>
+        <img
+          src="img/card-lazy.jpg"
+          data-src="img/law-3.jpg"
+          alt="Credit card"
+          class="features__img lazy-img"
+        />
+
+        <div class="features__feature features__feature-m">
+          <div class="features__icon features__icon-m">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+          <div class="features__deatail-cont">
+            <h5 class="features__header">Drept Civil</h5>
+            <p>
+              Asistență în litigiile civile, inclusiv contracte, drepturi de
+              proprietate, succesiuni și altele.
+            </p>
+          </div>
+        </div>
+        <div class="features__feature features__feature-m">
+          <div class="features__icon features__icon-m">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+          <div class="features__deatail-cont">
+            <h5 class="features__header">Drept Contravențional</h5>
+            <p>
+              Apărare în fața contravențiilor și oferirea de consultanță în
+              acest domeniu.
+            </p>
+          </div>
+        </div>
+        <div class="features__feature features__feature-m">
+          <div class="features__icon features__icon-m">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+          <div class="features__deatail-cont">
+            <h5 class="features__header">Dreptul Familiei</h5>
+            <p>
+              Soluționarea problemelor legate de divorț, custodie, adopție și
+              alte aspecte legate de dreptul familiei.
+            </p>
+          </div>
+        </div>
+        <div class="features__feature features__feature-m">
+          <div class="features__icon features__icon-m">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+          <div class="features__deatail-cont">
+            <h5 class="features__header">Dreptul Transporturilor</h5>
+            <p>
+              Asistență în cazuri legate de accidente de vehicule și alte
+              aspecte legate de transport.
+            </p>
+          </div>
+        </div>
+        <div class="features__feature features__feature-m">
+          <div class="features__icon features__icon-m">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+          <div class="features__deatail-cont">
+            <h5 class="features__header">
+              Asistare și Reprezentare în Materie Contractuală
+            </h5>
+            <p>
+              Ajutor în înțelegerea și negocierea contractelor pentru a proteja
+              interesele clienților.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="section--2">
@@ -233,13 +441,13 @@
             class="btn operations__tab operations__tab--1 operations__tab--active"
             data-tab="1"
           >
-            <span>01</span>Alegerea perfectă.
+            Alegerea perfectă.
           </button>
           <button class="btn operations__tab operations__tab--2" data-tab="2">
-            <span>02</span>Abilitatea
+            Abilitatea
           </button>
           <button class="btn operations__tab operations__tab--3" data-tab="3">
-            <span>03</span>Act de dreptate
+            Act de dreptate
           </button>
         </div>
         <div
