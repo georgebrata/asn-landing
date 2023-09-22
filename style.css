@@ -36,7 +36,6 @@ body {
 /* GENERAL ELEMENTS */
 .section {
   padding: 7rem 3rem;
-  border-top: 0.5px solid var(--color-primary-opacity);
 
   transition: transform 1s, opacity 1s;
 }
@@ -48,7 +47,7 @@ body {
 
 .section__title {
   max-width: 90rem;
-  margin: 0 auto 8rem auto;
+  margin: 0 auto 3rem auto;
 }
 
 .section__description {
@@ -108,6 +107,13 @@ p {
   padding-right: 2rem;
 }
 
+.copyright {
+  color: #eee;
+  text-align: center;
+  display: block;
+  width: 50%;
+  margin: 2rem auto;
+}
 /* This is BAD for accessibility! Don't do in the real world! */
 button:focus {
   outline: none;
@@ -188,7 +194,7 @@ img {
 .nav__link--btn:hover,
 .nav__link--btn:active {
   color: inherit;
-  background-color: var(--color-primary-darker);
+  background-color: var(--color-secondary-darker);
   color: #333;
 }
 
@@ -199,6 +205,13 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.mail-link,
+.mail-link:active,
+.mail-link:visited {
+  color: var(--color-tertiary-darker) !important;
+  text-decoration: none;
 }
 
 .header__title {
@@ -724,6 +737,39 @@ h4 {
   text-align: center;
   list-style: none;
   font-size: 1.5rem;
+}
+.address span {
+  display: inline-block;
+}
+
+.address__icon {
+  height: 3rem;
+}
+.address__phone,
+.address__mail,
+.address__location {
+  display: flex;
+  gap: 0.6rem;
+  width: 100%;
+  align-items: center;
+  /* justify-content: center; */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.address__home {
+  text-align: left;
+  padding: 1rem;
+}
+.address__icon {
+  fill: var(--color-tertiary);
+  display: inline-block;
+}
+.address__phone span,
+.address__mail span,
+.address__location span {
+  display: inline-block;
+  /* text-wrap: nowrap; */
 }
 
 /* Header styling mobile */

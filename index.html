@@ -554,10 +554,54 @@
             Ne puteți contacta oricând în intervalul L-V 09-18 pentru a discuta
             cazul dumneavoastră.
           </h2>
-          <li class="address__phone">Phone icon: +40742891577</li>
-          <li class="address__mail">Email icon: av.nagy.gs@gmail.com</li>
-          <li class="address__home">
-            Address icon: Piața Cipariu nr. 9, sc. 1, ap. 2, Cluj-Napoca
+          <li class="address__phone">
+            <span
+              ><svg
+                class="address__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z"
+                />
+              </svg>
+            </span>
+            <span>+40742891577</span>
+          </li>
+          <li class="address__mail">
+            <span>
+              <svg
+                class="address__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M22 5v4l-10 4L2 9V5a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1zM2 11.154V19a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-7.846l-10 4z"
+                />
+              </svg>
+            </span>
+            <span>
+              <a class="mail-link" href="mailto:av.nagy.gs@gmail.com"
+                >av.nagy.gs@gmail.com</a
+              >
+            </span>
+          </li>
+          <li class="address__location">
+            <span>
+              <svg
+                class="address__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+              >
+                <g data-name="User Home">
+                  <path d="M13 10.5V15h2v-2a1 1 0 0 1 2 0v2h2v-4.5l-3-2.25z" />
+                  <path
+                    d="M16 1A12.014 12.014 0 0 0 4 13c0 6.418 10.834 17.252 11.295 17.71a1 1 0 0 0 1.41 0C17.166 30.251 28 19.417 28 13A12.014 12.014 0 0 0 16 1zm5 15a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1v-6a.998.998 0 0 1 .4-.8l4-3a1 1 0 0 1 1.2 0l4 3a.998.998 0 0 1 .4.8z"
+                  />
+                </g>
+              </svg>
+            </span>
+            <span>Piața Cipariu nr. 9, sc. 1, ap. 2, Cluj-Napoca</span>
           </li>
           <li class="address__home">
             Suntem aici pentru a vă ajuta. Cu Avocatul Sebastian Nagy, aveți un
@@ -570,20 +614,9 @@
     </section>
 
     <footer class="footer">
-      <ul class="footer__nav">
-        <li class="footer__item">
-          <a class="footer__link" href="#">Servicii</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Desprei</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Mărturii</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Contactaţi-ne</a>
-        </li>
-      </ul>
+      <p class="copyright">
+        &copy; <span id="copyrightYear"></span> ASN. All Rights Reserved.
+      </p>
       <img src="img/logo.png" alt="Logo" class="footer__logo" />
     </footer>
 

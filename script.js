@@ -262,13 +262,10 @@ const slider = function () {
   });
 };
 slider();
-const dot = document.querySelector('.dot');
-dot.style.display = 'inline';
 
 document.addEventListener('DOMContentLoaded', function () {
   const toggleButton = document.getElementsByClassName('toggleButton');
 
-  console.log(toggleButton);
   const hiddenContent = document.querySelectorAll('.hidden-text');
   const [content1, content2] = [...hiddenContent];
 
@@ -338,3 +335,12 @@ toggleButton.addEventListener('click', function () {
     toggleButton.innerHTML = newSVGContentMenu;
   }
 });
+
+// Get the current year
+const currentYear = new Date().getFullYear();
+
+// Update the copyright year in the HTML
+const copyrightYearElement = document.getElementById('copyrightYear');
+if (copyrightYearElement) {
+  copyrightYearElement.textContent = currentYear;
+}
