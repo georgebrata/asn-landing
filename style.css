@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
 
 :root {
@@ -17,11 +24,13 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 html {
   font-size: 62.5%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -37,11 +46,21 @@ body {
 .section {
   padding: 7rem 3rem;
 
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+
+  transition: opacity 1s, -webkit-transform 1s;
+
+  -o-transition: transform 1s, opacity 1s;
+
   transition: transform 1s, opacity 1s;
+
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
 }
 
 .section--hidden {
   opacity: 0;
+  -webkit-transform: translateY(8rem);
+  -ms-transform: translateY(8rem);
   transform: translateY(8rem);
 }
 
@@ -75,6 +94,8 @@ body {
   padding: 1.25rem 4.5rem;
   border-radius: 10rem;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -93,6 +114,8 @@ body {
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .btn--small {
@@ -121,17 +144,28 @@ button:focus {
 }
 
 img {
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  -o-transition: filter 0.5s;
   transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
 }
 
 .lazy-img {
+  -webkit-filter: blur(20px);
   filter: blur(20px);
 }
 
 /* NAVIGATION */
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 9rem;
   width: 100%;
@@ -157,11 +191,17 @@ img {
 
 .nav__logo {
   height: 4.5rem;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   list-style: none;
 }
@@ -181,6 +221,8 @@ img {
   color: inherit;
   text-decoration: none;
   display: block;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -203,8 +245,15 @@ img {
 .header {
   padding: 0 3rem;
   height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -216,9 +265,13 @@ img {
 }
 
 .header__title {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0%;
   flex: 1 1 0%;
   max-width: 120rem;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 3fr 2fr;
   grid-template-columns: 3fr 2fr;
   row-gap: 3rem;
   place-content: center;
@@ -237,8 +290,14 @@ h4 {
 
 .header__img {
   width: 100%;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
   grid-row: 1 / span 4;
+  -webkit-transform: translateY(-6rem);
+  -ms-transform: translateY(-6rem);
   transform: translateY(-6rem);
 }
 
@@ -257,13 +316,17 @@ h4 {
   width: 100%;
   z-index: -1;
   opacity: 0.7;
+  -webkit-transform: scale(1.07, 1.05) skewX(-15deg);
+  -ms-transform: scale(1.07, 1.05) skewX(-15deg);
   transform: scale(1.07, 1.05) skewX(-15deg);
   background-image: var(--gradient-primary);
 }
 
 /* FEATURES */
 .features {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 4rem 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   margin: 0 12rem;
@@ -277,7 +340,10 @@ h4 {
 }
 
 .features__feature {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
+  -ms-grid-column-align: center;
   justify-self: center;
   width: 70%;
   background-color: #fff;
@@ -286,8 +352,14 @@ h4 {
 }
 
 .features__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background-color: var(--color-secondary-opacity);
   height: 5.5rem;
@@ -316,12 +388,18 @@ h4 {
 }
 
 .operations__tab-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .operations__tab {
   margin-right: 2.5rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -346,6 +424,8 @@ h4 {
 }
 
 .operations__tab--active {
+  -webkit-transform: translateY(-66%);
+  -ms-transform: translateY(-66%);
   transform: translateY(-66%);
 }
 
@@ -358,8 +438,12 @@ h4 {
 }
 
 .operations__content--active {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 7rem 3rem 1fr;
   grid-template-columns: 7rem 1fr;
+  -webkit-column-gap: 3rem;
+  -moz-column-gap: 3rem;
   column-gap: 3rem;
   row-gap: 0.5rem;
 }
@@ -367,13 +451,23 @@ h4 {
 .operations__header {
   font-size: 2.25rem;
   font-weight: 600;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
 }
 
 .operations__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   height: 7rem;
   width: 7rem;
@@ -386,6 +480,7 @@ h4 {
 }
 
 .operations__content p {
+  -ms-grid-column: 2;
   grid-column: 2;
 }
 
@@ -426,18 +521,31 @@ h4 {
   width: 100%;
   height: 50rem;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
   /* THIS creates the animation! */
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
   transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 .slide > img {
   /* Only for images that have different size than slide */
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -455,16 +563,21 @@ h4 {
   width: 5.5rem;
   font-size: 3.25rem;
   cursor: pointer;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .slider__btn--left {
   left: 6%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
 .slider__btn--right {
   right: 6%;
+  -webkit-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
 }
 
@@ -472,7 +585,11 @@ h4 {
   position: absolute;
   bottom: 5%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -485,6 +602,8 @@ h4 {
   border-radius: 50%;
   margin-right: 1.75rem;
   cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 
   /* Only necessary when overlying images */
@@ -539,12 +658,19 @@ h4 {
   width: 50%;
   margin: 0 auto;
 
+  display: -ms-grid;
+
   display: grid;
+  -ms-grid-columns: 6.5rem 2rem 1fr;
   grid-template-columns: 6.5rem 1fr;
+  -webkit-column-gap: 2rem;
+  -moz-column-gap: 2rem;
   column-gap: 2rem;
 }
 
 .testimonial__photo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   grid-row: 1 / span 2;
   width: 6.5rem;
   height: 6.5rem;
@@ -554,6 +680,8 @@ h4 {
 .testimonial__name {
   font-size: 1.7rem;
   font-weight: 500;
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
   align-self: end;
   margin: 0;
 }
@@ -597,7 +725,11 @@ h4 {
 
 .footer__nav {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 5rem;
 }
@@ -634,12 +766,17 @@ h4 {
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   max-width: 60rem;
   background-color: #f3f3f3;
   padding: 5rem 6rem;
+  -webkit-box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -650,8 +787,11 @@ h4 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   z-index: 100;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -663,8 +803,12 @@ h4 {
 
 .modal__form {
   margin: 0;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 2.5rem 2fr;
   grid-template-columns: 1fr 2fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 2.5rem;
 }
@@ -683,7 +827,10 @@ h4 {
 }
 
 .modal__form button {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
+  -ms-grid-column-align: center;
   justify-self: center;
   margin-top: 1rem;
 }
@@ -707,8 +854,14 @@ h4 {
 
 /* COOKIE MESSAGE */
 .cookie-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   width: 100%;
   background-color: white;
@@ -722,7 +875,12 @@ h4 {
   display: none;
 }
 .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 2rem;
   margin-top: 7rem;
@@ -746,9 +904,13 @@ h4 {
 .address__phone,
 .address__mail,
 .address__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 0.6rem;
   width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   /* justify-content: center; */
   margin: 0 auto;
