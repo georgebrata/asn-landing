@@ -278,6 +278,7 @@
   }
   .section__header {
     font-size: 1.5rem;
+    text-align: left;
   }
   .operations {
     max-width: 100rem;
@@ -503,6 +504,7 @@
   }
   .section__title {
     margin: 0px auto 2rem auto;
+    text-align: left;
   }
 
   .btn,
@@ -529,5 +531,9 @@
   .operations__tab-container {
     display: flex;
     justify-content: space-between;
+  }
+  .section--sign-up .section__header {
+    color: var(--color-primary);
+    text-align: left;
   }
 }
