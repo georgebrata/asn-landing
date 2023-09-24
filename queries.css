@@ -508,8 +508,9 @@
   .btn,
   .section--sign-up .btn {
     font-size: 1.4rem;
-    padding: 1.05rem 1.3rem;
+    padding: 1.25rem 1.8rem;
   }
+
   .btn--show-modal {
     font-size: 1.4rem !important;
     padding: 1rem 1.3rem !important;
