@@ -104,6 +104,10 @@
     gap: 4rem;
     margin: 0 0rem;
   }
+
+  /* .modal {
+    width: 64rem;
+  } */
 }
 
 /* CSS styles for small screens */
@@ -535,5 +539,19 @@
   .section--sign-up .section__header {
     color: var(--color-primary);
     text-align: left;
+  }
+
+  .modal__form {
+    margin: 0 0rem;
+    display: block;
+    grid-template-columns: 1fr;
+    align-items: baseline;
+    gap: 1.5rem;
+    align-content: space-around;
+    justify-content: center;
+  }
+
+  .modal__form input {
+    margin-bottom: 2rem;
   }
 }

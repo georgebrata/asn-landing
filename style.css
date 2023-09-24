@@ -48,6 +48,7 @@ body {
 .section__title {
   max-width: 90rem;
   margin: 0 auto 3rem auto;
+  text-align: left;
 }
 
 .section__description {
@@ -661,7 +662,7 @@ h4 {
 }
 
 .modal__form {
-  margin: 0 3rem;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
@@ -671,6 +672,7 @@ h4 {
 .modal__form label {
   font-size: 1.7rem;
   font-weight: 500;
+  text-wrap: nowrap;
 }
 
 .modal__form input {
@@ -791,4 +793,8 @@ h4 {
   fill: var(--color-secondary);
   stroke: var(--color-primary-opacity);
   width: 4rem;
+}
+
+textarea {
+  border: 1px solid #ddd;
 }
