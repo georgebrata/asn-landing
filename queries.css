@@ -274,14 +274,14 @@
   }
 
   .section {
-    padding: 5rem 3rem;
+    padding: 5rem 2rem;
   }
   .section__header {
     font-size: 1.5rem;
   }
   .operations {
     max-width: 100rem;
-    margin: 3rem auto 0 auto;
+    margin: 4rem auto 0 auto;
     padding: 1rem;
     background-color: #fff;
   }

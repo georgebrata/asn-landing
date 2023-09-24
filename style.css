@@ -770,6 +770,7 @@ h4 {
 .address__location span {
   display: inline-block;
   /* text-wrap: nowrap; */
+  text-align: left;
 }
 
 /* Header styling mobile */
