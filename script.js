@@ -39,19 +39,6 @@ document.addEventListener('keydown', function (e) {
 ///////////////////////////////////////
 // Button scrolling
 btnScrollTo.addEventListener('click', function (e) {
-  const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
-
-  console.log(e.target.getBoundingClientRect());
-
-  console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
-
-  console.log(
-    'height/width viewport',
-    document.documentElement.clientHeight,
-    document.documentElement.clientWidth
-  );
-
   section1.scrollIntoView({ behavior: 'smooth' });
 });
 
@@ -262,13 +249,10 @@ const slider = function () {
   });
 };
 slider();
-const dot = document.querySelector('.dot');
-dot.style.display = 'inline';
 
 document.addEventListener('DOMContentLoaded', function () {
   const toggleButton = document.getElementsByClassName('toggleButton');
 
-  console.log(toggleButton);
   const hiddenContent = document.querySelectorAll('.hidden-text');
   const [content1, content2] = [...hiddenContent];
 
@@ -338,3 +322,12 @@ toggleButton.addEventListener('click', function () {
     toggleButton.innerHTML = newSVGContentMenu;
   }
 });
+
+// Get the current year
+const currentYear = new Date().getFullYear();
+
+// Update the copyright year in the HTML
+const copyrightYearElement = document.getElementById('copyrightYear');
+if (copyrightYearElement) {
+  copyrightYearElement.textContent = currentYear;
+}
