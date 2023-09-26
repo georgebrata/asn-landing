@@ -738,9 +738,15 @@ h4 {
   margin-right: 4rem;
 }
 
-.footer__link {
+.footer__link:link {
   font-size: 1.6rem;
   color: #eee;
+  text-decoration: none;
+}
+.footer-link:link,
+.footer-link:visited {
+  font-size: 1.6rem;
+  color: var(--color-tertiary-darker);
   text-decoration: none;
 }
 
@@ -951,7 +957,7 @@ h4 {
   background-color: var(--color-secondary-opacity);
 }
 
-.btn-close__icon {
+p > h1 .btn-close__icon {
   fill: var(--color-secondary);
   stroke: var(--color-primary-opacity);
   width: 4rem;
