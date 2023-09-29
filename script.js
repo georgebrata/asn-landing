@@ -17,7 +17,7 @@ const tabsContent = document.querySelectorAll('.operations__content');
 const fetchTestimonial = fetchUrl => {
   fetch(fetchUrl)
     .then(response => {
-      // Check if the response status is OK (200)
+      // Check if the response status is OK (200).
       if (!response?.ok) {
         throw new Error(
           `Network response was not ok, status: ${response.status}`
