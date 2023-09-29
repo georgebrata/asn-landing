@@ -47,14 +47,9 @@
   .testimonial__text {
     width: 80%;
     font-size: 1.4rem;
-    margin: 0 auto;
-    text-align: center;
   }
 
   .testimonial__author {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
     margin: 2rem auto;
     -ms-grid-columns: 6.5rem 2rem 1fr;
     grid-template-columns: 6.5rem 1fr;
@@ -462,12 +457,13 @@
   }
 
   .slider {
-    height: 30rem;
+    height: 80rem;
   }
 
   .slide {
     width: 100%;
     height: 100%;
+    align-items: flex-start;
   }
   .testimonial::before {
     line-height: normal;
@@ -481,6 +477,15 @@
     border-bottom: none;
     text-align: center;
     padding: 10rem 3rem;
+  }
+  .testimonial__details {
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+  .testimonial__type {
+    font-size: 1.1rem;
+    padding: 0.5rem 1.2rem;
   }
 
   .testimonial__author {
@@ -540,7 +545,7 @@
   }
   .section--sign-up .section__header {
     color: var(--color-primary);
-    text-align: left;
+    text-align: center;
   }
 
   .modal__form {
