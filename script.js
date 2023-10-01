@@ -74,7 +74,6 @@ function renderTestimonialUi(data) {
     ${desc}
   </blockquote>
   <address class="testimonial__author">
-    <img src="img/user-1.jpg" alt="" class="testimonial__photo">
     <h6 class="testimonial__name">${name}</h6>
     <p class="testimonial__location"><a class="location-link" href=${link} target="_blank">${newspaper}</a></p>
   </address>

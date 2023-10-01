@@ -137,6 +137,7 @@ p {
   display: block;
   width: 50%;
   margin: 2rem auto;
+  font-size: 2rem;
 }
 /* This is BAD for accessibility! Don't do in the real world! */
 button:focus {
@@ -516,17 +517,18 @@ h4 {
 .slider {
   max-width: 100rem;
   background-color: #fff;
-  height: 60rem;
+  height: 55rem;
   margin: 0 auto;
   position: relative;
 
   /* IN THE END */
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .slide {
   position: absolute;
-  top: 0;
   width: 100%;
   display: -webkit-box;
 
@@ -652,7 +654,7 @@ h4 {
 }
 
 .testimonial__author {
-  margin-left: 3rem;
+  /* margin-left: 3rem;
   font-style: normal;
   width: 100%;
   margin: 0 auto;
@@ -664,7 +666,9 @@ h4 {
   grid-template-columns: 6.5rem 1fr;
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
-  column-gap: 2rem;
+  column-gap: 2rem; */
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial__photo {
@@ -720,7 +724,7 @@ h4 {
 .section--sign-up {
   background-color: var(--color-opacity);
   border-top: none;
-  border-bottom: 1px solid #444;
+  /* border-bottom: 1px solid #444; */
   text-align: center;
   padding: 10rem 3rem;
 }
@@ -741,7 +745,7 @@ h4 {
 
 /* FOOTER */
 .footer {
-  padding: 10rem 3rem;
+  padding: 5rem 2rem;
   background-color: var(--color-primary);
 }
 
@@ -776,7 +780,7 @@ h4 {
   height: 5rem;
   display: block;
   margin: 0 auto;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 .footer__copyright {
@@ -927,7 +931,7 @@ h4 {
 }
 
 .address__icon {
-  height: 3rem;
+  height: 2rem;
 }
 .address__phone,
 .address__mail,
@@ -940,7 +944,7 @@ h4 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -953,12 +957,8 @@ h4 {
   fill: var(--color-tertiary);
   display: inline-block;
 }
-.address__phone span,
-.address__mail span,
-.address__location span {
-  display: inline-block;
-  /* text-wrap: nowrap; */
-  text-align: left;
+.contact-icon {
+  margin-top: 1rem;
 }
 
 /* Header styling mobile */
@@ -987,4 +987,13 @@ p > h1 .btn-close__icon {
 
 textarea {
   border: 1px solid #ddd;
+}
+
+.header__title {
+  margin-top: 11rem;
+}
+
+
+#despre, #servicii, #contact {
+  padding-top: 20rem;
 }
