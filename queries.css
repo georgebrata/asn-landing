@@ -1,6 +1,9 @@
 /* CSS styles for extra-large screens */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   /* Add your CSS styles for extra-large screens here */
+  .header__title {
+    margin-top: 11rem;
+  }
 }
 
 /* CSS styles for large screens */
@@ -26,6 +29,10 @@
     font-size: 1.4rem;
   }
 
+  .header__title {
+    margin-top: 11rem;
+  }
+
   .section__header {
     font-size: 2.5rem;
     line-height: 1.3;
@@ -47,15 +54,10 @@
   .testimonial__text {
     width: 80%;
     font-size: 1.4rem;
-    margin: 0 auto;
-    text-align: center;
   }
 
   .testimonial__author {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 2rem auto;
+    /* margin: 2rem auto; */
     -ms-grid-columns: 6.5rem 2rem 1fr;
     grid-template-columns: 6.5rem 1fr;
     -webkit-column-gap: 2rem;
@@ -103,6 +105,7 @@
   /* .modal {
     width: 64rem;
   } */
+
 }
 
 /* CSS styles for small screens */
@@ -166,6 +169,10 @@
 
 /* CSS styles for extra small screens */
 @media (max-width: 575.98px) {
+  .hidden-sm {
+    display: none;
+  }
+
   /* Add your CSS styles for extra small screens here */
   .section {
   }
@@ -182,6 +189,7 @@
 
   .header__title {
     display: none;
+    margin-top: 0;
   }
 
   .header__title-m {
@@ -462,12 +470,13 @@
   }
 
   .slider {
-    height: 30rem;
+    height: 80rem;
   }
 
   .slide {
     width: 100%;
     height: 100%;
+    align-items: flex-start;
   }
   .testimonial::before {
     line-height: normal;
@@ -481,6 +490,15 @@
     border-bottom: none;
     text-align: center;
     padding: 10rem 3rem;
+  }
+  .testimonial__details {
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+  .testimonial__type {
+    font-size: 1.1rem;
+    padding: 0.5rem 1.2rem;
   }
 
   .testimonial__author {
@@ -540,7 +558,7 @@
   }
   .section--sign-up .section__header {
     color: var(--color-primary);
-    text-align: left;
+    text-align: center;
   }
 
   .modal__form {

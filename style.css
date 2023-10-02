@@ -137,6 +137,7 @@ p {
   display: block;
   width: 50%;
   margin: 2rem auto;
+  font-size: 2rem;
 }
 /* This is BAD for accessibility! Don't do in the real world! */
 button:focus {
@@ -259,9 +260,18 @@ img {
 
 .mail-link,
 .mail-link:active,
-.mail-link:visited {
+.mail-link:visited,
+.location-link,
+.location-link:active,
+.location-link:visited {
   color: var(--color-tertiary-darker) !important;
   text-decoration: none;
+}
+
+.location-link,
+.location-link:active,
+.location-link:visited {
+  text-decoration: underline;
 }
 
 .header__title {
@@ -507,20 +517,19 @@ h4 {
 .slider {
   max-width: 100rem;
   background-color: #fff;
-  height: 50rem;
+  height: 55rem;
   margin: 0 auto;
   position: relative;
 
   /* IN THE END */
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .slide {
   position: absolute;
-  top: 0;
   width: 100%;
-  height: 50rem;
-
   display: -webkit-box;
 
   display: -ms-flexbox;
@@ -624,38 +633,30 @@ h4 {
 .testimonial {
   width: 65%;
   position: relative;
-}
-
-.testimonial::before {
-  content: '\201C';
-  position: absolute;
-  top: -5.7rem;
-  left: -6.8rem;
-  line-height: 1;
-  font-size: 20rem;
-  font-family: inherit;
-  color: var(--color-primary);
-  z-index: -1;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .testimonial__header {
   font-size: 2.25rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .testimonial__text {
-  font-size: 1.7rem;
-  margin-bottom: 3.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
   color: #666;
-  text-align: center;
 }
 
 .testimonial__author {
-  margin-left: 3rem;
+  /* margin-left: 3rem;
   font-style: normal;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 
   display: -ms-grid;
@@ -665,7 +666,9 @@ h4 {
   grid-template-columns: 6.5rem 1fr;
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
-  column-gap: 2rem;
+  column-gap: 2rem; */
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial__photo {
@@ -679,7 +682,7 @@ h4 {
 
 .testimonial__name {
   font-size: 1.7rem;
-  font-weight: 500;
+  font-weight: 600;
   -ms-flex-item-align: end;
   -ms-grid-row-align: end;
   align-self: end;
@@ -690,6 +693,29 @@ h4 {
   font-size: 1.5rem;
 }
 
+.testimonial__details {
+  font-size: 1.6rem;
+  display: flex;
+  width: 100%;
+
+  margin-bottom: 4rem;
+  color: #666;
+  align-items: center;
+  justify-content: space-between;
+}
+.testimonial__type {
+  background-color: var(--color-primary-opacity);
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  color: #fff;
+  border-radius: 20rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+
+.testimonial__date {
+  margin-right: 2rem;
+}
 .section__title--testimonials {
   margin-bottom: 4rem;
 }
@@ -698,7 +724,7 @@ h4 {
 .section--sign-up {
   background-color: var(--color-opacity);
   border-top: none;
-  border-bottom: 1px solid #444;
+  /* border-bottom: 1px solid #444; */
   text-align: center;
   padding: 10rem 3rem;
 }
@@ -719,7 +745,7 @@ h4 {
 
 /* FOOTER */
 .footer {
-  padding: 10rem 3rem;
+  padding: 5rem 2rem;
   background-color: var(--color-primary);
 }
 
@@ -738,9 +764,15 @@ h4 {
   margin-right: 4rem;
 }
 
-.footer__link {
+.footer__link:link {
   font-size: 1.6rem;
   color: #eee;
+  text-decoration: none;
+}
+.footer-link:link,
+.footer-link:visited {
+  font-size: 1.6rem;
+  color: var(--color-tertiary-darker);
   text-decoration: none;
 }
 
@@ -748,7 +780,7 @@ h4 {
   height: 5rem;
   display: block;
   margin: 0 auto;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 .footer__copyright {
@@ -899,7 +931,7 @@ h4 {
 }
 
 .address__icon {
-  height: 3rem;
+  height: 2rem;
 }
 .address__phone,
 .address__mail,
@@ -912,7 +944,7 @@ h4 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -925,12 +957,8 @@ h4 {
   fill: var(--color-tertiary);
   display: inline-block;
 }
-.address__phone span,
-.address__mail span,
-.address__location span {
-  display: inline-block;
-  /* text-wrap: nowrap; */
-  text-align: left;
+.contact-icon {
+  margin-top: 1rem;
 }
 
 /* Header styling mobile */
@@ -951,7 +979,7 @@ h4 {
   background-color: var(--color-secondary-opacity);
 }
 
-.btn-close__icon {
+p > h1 .btn-close__icon {
   fill: var(--color-secondary);
   stroke: var(--color-primary-opacity);
   width: 4rem;
@@ -959,4 +987,13 @@ h4 {
 
 textarea {
   border: 1px solid #ddd;
+}
+
+.header__title {
+  margin-top: 11rem;
+}
+
+
+#despre, #servicii, #contact {
+  padding-top: 20rem;
 }
