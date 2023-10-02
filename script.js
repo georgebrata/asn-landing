@@ -10,13 +10,29 @@ const nav = document.querySelector('.nav');
 const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
+const slideContainer = document.querySelector('.slider');
+const spinner = document.querySelector('.lds-ellipsis');
+
+function showSpinner() {
+  return (spinner.style.display = 'block');
+}
+
+// Function to hide the spinner
+function hideSpinner() {
+  return (spinner.style.display = 'none');
+}
 
 ///////////////////////////////////////
 // Modal window
 
+showSpinner();
+
 const fetchTestimonial = fetchUrl => {
+  showSpinner();
+
   fetch(fetchUrl)
     .then(response => {
+      showSpinner();
       // Check if the response status is OK (200).
       if (!response?.ok) {
         throw new Error(
@@ -27,11 +43,13 @@ const fetchTestimonial = fetchUrl => {
       return response?.json?.();
     })
     .then(data => {
+      hideSpinner();
       // Use the data from the API
       renderTestimonialUi(data?.presa);
     })
     .catch(error => {
       // Handle errors
+      hideSpinner();
       console.error('Fetch error:', error);
     });
 };
@@ -39,7 +57,6 @@ const fetchTestimonial = fetchUrl => {
 fetchTestimonial(
   'https://api.sheety.co/06def408e74850aef0fbd22a79539f9f/asn/presa'
 );
-const slideContainer = document.querySelector('.slider');
 
 function renderTestimonialUi(data) {
   if (!data) return;

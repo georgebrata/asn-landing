@@ -65,6 +65,7 @@
     -ms-flex-line-pack: distribute;
     align-content: space-around;
   }
+
   .address__home {
     width: 80%;
     margin: 0 auto;
@@ -461,7 +462,7 @@
   }
 
   .slider {
-    height: 80rem;
+    /* height: 80rem; */
   }
 
   .slide {
@@ -504,6 +505,11 @@
     font-size: 1.4rem;
     margin: 0;
     text-align: left;
+  }
+
+  .testimonial__tags {
+    display: flex;
+    justify-content: space-between;
   }
 
   .operations__tab {
