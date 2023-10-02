@@ -430,6 +430,11 @@
     border: none;
     padding: 3px 3px;
     cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+  }
+  #toggleButton-close .btn-close__icon {
+    fill: var(--color-secondary);
   }
 
   .nav.sticky {
@@ -437,7 +442,6 @@
     padding-right: 3rem;
   }
   .nav.sticky .btn-close__icon {
-    background-color: var(--color-secondary);
     border: none;
     outline: none;
   }
