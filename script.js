@@ -13,6 +13,8 @@ const tabsContent = document.querySelectorAll('.operations__content');
 const slideContainer = document.querySelector('.slider');
 const spinner = document.querySelector('.lds-ellipsis');
 
+console.log(spinner);
+
 function showSpinner() {
   return (spinner.style.display = 'block');
 }
@@ -91,7 +93,6 @@ function renderTestimonialUi(data) {
     ${desc}
   </blockquote>
   <address class="testimonial__author">
-    <img src="img/user-1.jpg" alt="" class="testimonial__photo">
     <h6 class="testimonial__name">${name}</h6>
     <p class="testimonial__location"><a class="location-link" href=${link} target="_blank">${newspaper}</a></p>
   </address>

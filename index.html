@@ -8,8 +8,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap"
       rel="stylesheet"
@@ -20,6 +18,7 @@
 
     <script defer src="script.js"></script>
   </head>
+
   <body>
     <header class="header">
       <nav class="nav">
@@ -33,17 +32,14 @@
         />
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link" href="#section--2">Despre</a>
+            <a class="nav__link" href="#despre">Despre</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--1">Servicii</a>
+            <a class="nav__link" href="#servicii">Servicii</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--3">Testimoniale</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--btn btn--show-modal" href="#"
-              >Contactaţi-ne</a
+            <a class="nav__link nav__link--btn btn--show-modal" href="#contact"
+              >Contact</a
             >
           </li>
         </ul>
@@ -61,18 +57,14 @@
         </button>
         <ul class="nav__links nav__links-m nav__links-m--close">
           <li class="nav__item">
-            <a class="nav__link" href="#section--2">Despre</a>
+            <a class="nav__link" href="#despre">Despre</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--1">Servicii</a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="#section--3">Testimoniale</a>
+            <a class="nav__link" href="#servicii">Servicii</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link nav__link--btn btn--show-modal" href="#"
-              >Contactaţi-ne</a
+            <a class="nav__link nav__link--btn btn--show-modal" href="#contact"
+              >Contact</a
             >
           </li>
         </ul>
@@ -85,28 +77,24 @@
             <!-- Green highlight effect -->
             <span class="highlight">Nagy</span>
           </h1>
-          <h4>Avocat definitiv Cluj</h4>
+          <h4>Avocat definitiv Cluj-Napoca</h4>
           <p>
             <span class="header__desc">
-              Pasiunea pentru drept, determinarea, accentul deosebit pus pe
-              nevoile și interesele clienților precum și vastele cunoștințe
-              juridice sunt doar câteva dintre atributele care ne definesc munca
-              și ne recomanda pentru o colaborare încununată de succes.
-              <span class="dot">...</span>
+              Activitatea noastră este caracterizata de inovare și
+              adaptabilitate la nevoile clientului, transparență, atenție la
+              detalii, experiență și expertiza de înaltă calitate și nu în
+              ultimul rand, disponibilitate în relația cu clienții.
             </span>
-            <!-- <span class="hidden-text">
-              <br />
-            </span> -->
-            <!-- <button class="btn--text btn--text--small toggleButton" id="">
-              Vezi mai mult
-            </button> -->
           </p>
         </div>
-        <button class="btn--text btn--scroll-to">Mai mult &DownArrow;</button>
+        <!-- <button class="btn--text btn--scroll-to">Mai mult &DownArrow;</button> -->
+        <button class="btn btn--show-modal">Contactează</button>
+
+        <!--TODO: smaller image, rounded borders -->
         <img
           src="img/hero.jpg"
           class="header__img"
-          alt="Minimalist bank items"
+          alt="Avocat Sebastian Nagy imagine profil | Avocat definitiv Cluj-Napoca"
         />
       </div>
 
@@ -120,51 +108,27 @@
           <h4>Avocat definitiv Cluj-Napoca</h4>
           <p>
             <span class="header__desc">
-              Pasiunea pentru drept, determinarea, accentul deosebit pus pe
-              nevoile și interesele clienților precum și vastele cunoștințe
-              juridice sunt doar câteva dintre atributele care ne definesc munca
-              și ne recomanda pentru o colaborare încununată de succes.
-              <!-- <span class="dot">...</span> -->
+              Activitatea noastră este caracterizata de inovare și
+              adaptabilitate la nevoile clientului, transparență, atenție la
+              detalii, experiență și expertiza de înaltă calitate și nu în
+              ultimul rand, disponibilitate în relația cu clienții.
             </span>
-            <!-- <span class="hidden-text">
-              <br />
-              Avocat Sebastian Nagy este un absolvent de top al Facultății de
-              Drept din Cluj-Napoca și este cunoscut pe plan local pentru
-              pasiunea sa de a face diferența în domeniul juridic. În timpul
-              facultății, Sebastian a primit numeroase premii și distincţii. S-a
-              remarcat în mod deosebit prin implicarea sa în cadrul proiectului
-              “Educație juridica în scoli”, demonstrându-și abilitatea de a
-              explica și dezbate conceptele juridice într-un mod accesibil
-              pentru elevi. Pasiunea pentru un act de justiție de calitate l-a
-              împins pe Sebastian Nagy sa fie prezent în mod constant în presa
-              locală și națională, contribuind cu expertiza sa în educatia
-              juridica a intregii societati. <br />
-              Compensatie daune materiale si daune morale acordate unor clujeni
-              pentru zbor anulat Interviu: Erorile statului rămân o realitate în
-              România anului 2023
-            </span> -->
-            <!-- <button class="btn--text btn--text--small toggleButton" id="">
-              Vezi mai mult
-            </button> -->
           </p>
-          <button class="btn--text btn--scroll-to">Mai mult &DownArrow;</button>
+          <!-- <button class="btn--text btn--scroll-to">Mai mult &DownArrow;</button> -->
+          <a class="btn--show-modal" href="#contact">Contactează</a>
         </div>
         <img
           src="img/hero.jpg"
           class="header__img"
-          alt="Minimalist bank items"
+          alt="Avocat Sebastian Nagy imagine profil | Avocat definitiv Cluj-Napoca"
         />
       </div>
     </header>
 
-    <section class="section" id="section--2">
+    <section class="section" id="despre">
       <div class="section__title">
-        <h2 class="section__description">Desprei</h2>
-        <h3 class="section__header">
-          Bun venit pe pagina oficială a avocatului Sebastian Nagy, un
-          profesionist tânăr și ambițios specializat în diverse ramuri ale
-          dreptului.
-        </h3>
+        <h2 class="section__description">Despre</h2>
+        <h3 class="section__header">Abordarea noastră în domeniul dreptului</h3>
       </div>
 
       <div class="operations">
@@ -173,13 +137,13 @@
             class="btn operations__tab operations__tab--1 operations__tab--active"
             data-tab="1"
           >
-            Alegerea
+            Determinare
           </button>
           <button class="btn operations__tab operations__tab--2" data-tab="2">
-            Abilitatea
+            Abilitate
           </button>
           <button class="btn operations__tab operations__tab--3" data-tab="3">
-            Act de dreptate
+            Pasiune
           </button>
         </div>
         <div
@@ -191,18 +155,16 @@
             </svg>
           </div>
           <h5 class="operations__header">
-            Alegerea perfectă pentru a vă oferi asistență și reprezentare
-            juridică de încredere.
+            Alegerea perfectă pentru a vă oferi asistență juridică de încredere
           </h5>
           <p>
-            De la momentul înființări și pana în prezent am demonstrat prin
-            numeroasele reușite profesionale și clienți mulțumiți faptul ca,
+            De la momentul înființării și până în prezent am demonstrat prin
+            numeroasele reușite profesionale și clienți mulțumiți faptul că
             oferim servicii juridice de înaltă calitate în diverse ramuri ale
-            dreptului. Astfel, pasiunea pentru drept, determinarea, accentul
-            deosebit pus pe nevoile și interesele clienților precum și vastele
-            cunoștințe juridice sunt doar câteva dintre atributele care ne
-            definesc munca și ne recomanda pentru o colaborare încununată de
-            succes.
+            dreptului. Astfel, determinarea și accentul deosebit pus pe nevoile
+            și interesele clienților precum și vastele cunoștințe juridice sunt
+            doar câteva dintre atributele care ne definesc munca și ne recomanda
+            pentru o colaborare încununată de succes.
           </p>
         </div>
 
@@ -213,8 +175,7 @@
             </svg>
           </div>
           <h5 class="operations__header">
-            Avocat Sebastian Nagy este un absolvent de top al Facultății de
-            Drept din Cluj-Napoca.
+            Absolvent de top al Facultății de Drept din Cluj-Napoca
           </h5>
           <p>
             Avocat Sebastian Nagy este un absolvent de top al Facultății de
@@ -222,7 +183,7 @@
             sa de a face diferența în domeniul juridic. În timpul facultății,
             Sebastian a primit numeroase premii și distincţii. S-a remarcat în
             mod deosebit prin implicarea sa în cadrul proiectului “Educație
-            juridica în scoli”, demonstrându-și abilitatea de a explica și
+            juridică în școli”, demonstrându-și abilitatea de a explica și
             dezbate conceptele juridice într-un mod accesibil pentru elevi.
           </p>
         </div>
@@ -233,22 +194,24 @@
             </svg>
           </div>
           <h5 class="operations__header">
-            Are pasiunea pentru un act de dreptate de calitate
+            Pasiune pentru justiție de calitate
           </h5>
           <p>
             Pasiunea pentru un act de justiție de calitate l-a împins pe
             Sebastian Nagy sa fie prezent în mod constant în presa locală și
-            națională, contribuind cu expertiza sa în educatia juridica a
+            națională, contribuind cu expertiza sa la educația juridică a
             intregii societati.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="section--1">
+    <section class="section" id="servicii">
       <div class="section__title">
         <h2 class="section__description">Soluții există</h2>
-        <h3 class="section__header">Servicii juridice de calitate</h3>
+        <h3 class="section__header">
+          Servicii juridice de încredere în Cluj-Napoca
+        </h3>
       </div>
 
       <div class="features">
@@ -266,7 +229,7 @@
           </div>
           <h5 class="features__header">Drept Penal</h5>
           <p>
-            : Apărare și reprezentare în dosare penale, asigurându-se că
+            Apărare și reprezentare în dosare penale, asigurându-se că
             drepturile și interesele clienților săi sunt protejate cu fermitate.
           </p>
         </div>
@@ -277,10 +240,10 @@
               <use xlink:href="img/icons.svg#icon-trending-up"></use>
             </svg>
           </div>
-          <h5 class="features__header">Drept Pena</h5>
+          <h5 class="features__header">Dreptul Familiei</h5>
           <p>
-            Apărare și reprezentare în dosare penale, asigurându-se că
-            drepturile și interesele clienților săi sunt protejate cu fermitate
+            Soluționarea problemelor legate de divorț, custodie, adopție și alte
+            aspecte legate de dreptul familiei.
           </p>
         </div>
         <img
@@ -326,18 +289,6 @@
               <use xlink:href="img/icons.svg#icon-credit-card"></use>
             </svg>
           </div>
-          <h5 class="features__header">Dreptul Familiei</h5>
-          <p>
-            Soluționarea problemelor legate de divorț, custodie, adopție și alte
-            aspecte legate de dreptul familiei.
-          </p>
-        </div>
-        <div class="features__feature">
-          <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
-          </div>
           <h5 class="features__header">Dreptul Transporturilor</h5>
           <p>
             Asistență în cazuri legate de accidente de vehicule și alte aspecte
@@ -350,9 +301,19 @@
               <use xlink:href="img/icons.svg#icon-credit-card"></use>
             </svg>
           </div>
-          <h5 class="features__header">
-            Asistare și Reprezentare în Materie Contractuală
-          </h5>
+          <h5 class="features__header">Asistare în materie contractuală</h5>
+          <p>
+            Ajutor în înțelegerea și negocierea contractelor pentru a proteja
+            interesele clienților.
+          </p>
+        </div>
+        <div class="features__feature">
+          <div class="features__icon">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+          <h5 class="features__header">Reprezentare în materie contractuală</h5>
           <p>
             Ajutor în înțelegerea și negocierea contractelor pentru a proteja
             interesele clienților.
@@ -394,7 +355,7 @@
             </svg>
           </div>
           <div class="features__deatail-cont">
-            <h5 class="features__header">Drept Pena</h5>
+            <h5 class="features__header">Drept Penal</h5>
             <p>
               Apărare și reprezentare în dosare penale, asigurându-se că
               drepturile și interesele clienților săi sunt protejate cu
@@ -472,8 +433,22 @@
             </svg>
           </div>
           <div class="features__deatail-cont">
+            <h5 class="features__header">Asistare în materie contractuală</h5>
+            <p>
+              Ajutor în înțelegerea și negocierea contractelor pentru a proteja
+              interesele clienților.
+            </p>
+          </div>
+        </div>
+        <div class="features__feature features__feature-m">
+          <div class="features__icon features__icon-m">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+          <div class="features__deatail-cont">
             <h5 class="features__header">
-              Asistare și Reprezentare în Materie Contractuală
+              Reprezentare în materie contractuală
             </h5>
             <p>
               Ajutor în înțelegerea și negocierea contractelor pentru a proteja
@@ -484,12 +459,20 @@
       </div>
     </section>
 
-    <section class="section" id="section--3">
-      <div class="section__title section__title--testimonials">
-        <h2 class="section__description">Nu sunt sigur inca?</h2>
+    <section class="section section--sign-up">
+      <div class="section__title">
         <h3 class="section__header">
-          Milioane de Clienți își fac deja viața mai ușoară.
+          Ai nevoie de asistență juridică personalizată?
         </h3>
+      </div>
+      <button class="btn btn--show-modal">Trimite mesaj</button>
+      <a href="tel:++40742891577"><button class="btn">Sună</button></a>
+    </section>
+
+    <section class="section" id="presa">
+      <div class="section__title section__title--testimonials">
+        <h2 class="section__description">Vezi ce spun și alții</h2>
+        <h3 class="section__header">Apariții presă</h3>
       </div>
 
       <div class="slider">
@@ -506,21 +489,10 @@
       </div>
     </section>
 
-    <section class="section section--sign-up">
-      <div class="section__title">
-        <h3 class="section__header">
-          Ma puteti contacta apasand butonul de mai jos
-        </h3>
-      </div>
-      <button class="btn btn--show-modal">Contactaţi-ne</button>
-    </section>
-
-    <section class="section" id="section--2">
+    <section class="section" id="contact">
       <div class="section__title">
         <h2 class="section__description">Contact</h2>
-        <h3 class="section__header">
-          Bun venit pe pagina oficială a avocatului Sebastian Nagy,
-        </h3>
+        <h3 class="section__header">Suntem la un mesaj distanță</h3>
       </div>
 
       <div class="operations">
@@ -535,26 +507,26 @@
         ></iframe>
 
         <ul class="address">
-          <h2 class="section__title">
-            Ne puteți contacta oricând în intervalul L-V 09-18 pentru a discuta
-            cazul dumneavoastră.
-          </h2>
-          <li class="address__phone">
-            <span
-              ><svg
+          <h2 class="mt-2">Luni - Vineri 09:00 - 18:00</h2>
+          <li class="address__location">
+            <span class="contact-icon">
+              <svg
                 class="address__icon"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                viewBox="0 0 32 32"
               >
-                <path
-                  d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z"
-                />
+                <g data-name="User Home">
+                  <path d="M13 10.5V15h2v-2a1 1 0 0 1 2 0v2h2v-4.5l-3-2.25z" />
+                  <path
+                    d="M16 1A12.014 12.014 0 0 0 4 13c0 6.418 10.834 17.252 11.295 17.71a1 1 0 0 0 1.41 0C17.166 30.251 28 19.417 28 13A12.014 12.014 0 0 0 16 1zm5 15a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1v-6a.998.998 0 0 1 .4-.8l4-3a1 1 0 0 1 1.2 0l4 3a.998.998 0 0 1 .4.8z"
+                  />
+                </g>
               </svg>
             </span>
-            <a class="footer-link" href="tel:+400722556665">0722 556 665</a>
+            <span>Piața Cipariu nr. 9, sc. 1, ap. 2, Cluj-Napoca</span>
           </li>
           <li class="address__mail">
-            <span>
+            <span class="contact-icon">
               <svg
                 class="address__icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -571,28 +543,19 @@
               >
             </span>
           </li>
-          <li class="address__location">
-            <span>
+          <li class="address__phone">
+            <span class="contact-icon">
               <svg
                 class="address__icon"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 32 32"
+                viewBox="0 0 24 24"
               >
-                <g data-name="User Home">
-                  <path d="M13 10.5V15h2v-2a1 1 0 0 1 2 0v2h2v-4.5l-3-2.25z" />
-                  <path
-                    d="M16 1A12.014 12.014 0 0 0 4 13c0 6.418 10.834 17.252 11.295 17.71a1 1 0 0 0 1.41 0C17.166 30.251 28 19.417 28 13A12.014 12.014 0 0 0 16 1zm5 15a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1v-6a.998.998 0 0 1 .4-.8l4-3a1 1 0 0 1 1.2 0l4 3a.998.998 0 0 1 .4.8z"
-                  />
-                </g>
+                <path
+                  d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z"
+                />
               </svg>
             </span>
-            <span>Piața Cipariu nr. 9, sc. 1, ap. 2, Cluj-Napoca</span>
-          </li>
-          <li class="address__home">
-            Suntem aici pentru a vă ajuta. Cu Avocatul Sebastian Nagy, aveți un
-            aliat de nădejde în sistemul legal. Cu experiență, pasiune și
-            dedicare, suntem aici pentru a vă oferi soluții juridice de
-            încredere. Contactați-ne astăzi pentru a începe!
+            <a class="footer-link" href="tel:+400722556665">0722 556 665</a>
           </li>
         </ul>
       </div>
@@ -600,9 +563,13 @@
 
     <footer class="footer">
       <p class="copyright">
-        <span id="copyrightYear"></span> &copy;Avocat Sebastian Gabriel Nagy
+        <span id="copyrightYear"></span> &copy; Avocat Sebastian Gabriel Nagy
       </p>
-      <img src="img/logo.png" alt="Logo" class="footer__logo" />
+      <img
+        src="img/logo.png"
+        alt="Avocat Sebastian Gabriel Nagy Cluj-Napoca logo"
+        class="footer__logo"
+      />
     </footer>
 
     <div class="modal hidden">
