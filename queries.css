@@ -545,7 +545,7 @@
 
   .btn--show-modal {
     font-size: 1.4rem !important;
-    padding: 1rem 1.3rem !important;
+    padding: 1rem 0 0.3rem 0 !important;
   }
 
   .operations__tab--1 {

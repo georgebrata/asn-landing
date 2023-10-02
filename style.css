@@ -41,6 +41,11 @@ body {
   line-height: 1.9;
   background-color: #f3f3f3;
 }
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
 
 /* GENERAL ELEMENTS */
 .section {
@@ -112,7 +117,7 @@ body {
   color: var(--secondary-primary);
   border: none;
   border-bottom: 1px solid currentColor;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -229,7 +234,7 @@ img {
 
 .nav__link--btn:link,
 .nav__link--btn:visited {
-  padding: 0.8rem 2.5rem;
+  padding: 0.8rem 2.5rem !important;
   border-radius: 3rem;
   background-color: var(--color-secondary);
   color: #222;
