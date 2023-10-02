@@ -650,7 +650,7 @@ h4 {
   font-weight: 600;
   margin-bottom: 1.5rem;
   overflow: hidden;
-  text-align: left;
+  text-align: center;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -664,7 +664,7 @@ h4 {
   width: 100%;
   font-size: 1.4rem;
   margin: 0;
-  text-align: left;
+  text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -673,21 +673,10 @@ h4 {
 }
 
 .testimonial__author {
-  /* margin-left: 3rem;
-  font-style: normal;
   width: 100%;
-  margin: 0 auto;
-
-  display: -ms-grid;
-
-  display: grid;
-  -ms-grid-columns: 6.5rem 2rem 1fr;
-  grid-template-columns: 6.5rem 1fr;
-  -webkit-column-gap: 2rem;
-  -moz-column-gap: 2rem;
-  column-gap: 2rem; */
   display: flex;
   flex-direction: column;
+  display: block;
 }
 
 .testimonial__photo {
@@ -701,6 +690,7 @@ h4 {
 
 .testimonial__name {
   font-size: 1.7rem;
+  text-align: center;
   font-weight: 600;
   -ms-flex-item-align: end;
   -ms-grid-row-align: end;
@@ -710,6 +700,7 @@ h4 {
 
 .testimonial__location {
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .testimonial__details {
@@ -1011,7 +1002,7 @@ textarea {
 
 .lds-ellipsis {
   display: inline-block;
-  position: relative;
+  position: absolute;
   width: 80px;
   height: 80px;
   left: 50%;
