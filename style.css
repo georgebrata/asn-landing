@@ -555,6 +555,34 @@ h4 {
   transition: transform 1s, -webkit-transform 1s;
 }
 
+.t-8 {
+  transform: translateX(-800%);
+}
+.t-7 {
+  transform: translateX(-700%);
+}
+.t-6 {
+  transform: translateX(-600%);
+}
+.t-5 {
+  transform: translateX(-500%);
+}
+.t-4 {
+  transform: translateX(-400%);
+}
+.t-3 {
+  transform: translateX(-300%);
+}
+.t-2 {
+  transform: translateX(-200%);
+}
+.t-1 {
+  transform: translateX(-100%);
+}
+.t-0 {
+  transform: translateX(0%);
+}
+
 .slide > img {
   /* Only for images that have different size than slide */
   width: 100%;
@@ -701,6 +729,7 @@ h4 {
 .testimonial__location {
   font-size: 1.5rem;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .testimonial__details {
@@ -998,6 +1027,7 @@ p > h1 .btn-close__icon {
 
 textarea {
   border: 1px solid #ddd;
+  resize: 'none';
 }
 
 .lds-ellipsis {

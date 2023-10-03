@@ -13,8 +13,6 @@ const tabsContent = document.querySelectorAll('.operations__content');
 const slideContainer = document.querySelector('.slider');
 const spinner = document.querySelector('.lds-ellipsis');
 
-console.log(spinner);
-
 function showSpinner() {
   return (spinner.style.display = 'block');
 }
