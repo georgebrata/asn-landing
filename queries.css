@@ -466,7 +466,7 @@
 
   .btn,
   .section--sign-up .btn {
-    padding: 1.05rem 1.5rem;
+    padding: 1.05rem 1.5rem !important;
   }
 
   .testimonial::before {
