@@ -182,6 +182,7 @@ img {
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
+  top: 0;
   background-color: var(--color-primary);
 
   .nav__link {
@@ -383,7 +384,7 @@ h4 {
   margin-bottom: 2rem;
 }
 
-.features__icon svg {
+.features__icon img {
   height: 2.5rem;
   width: 2.5rem;
   fill: var(--color-primary);
@@ -489,7 +490,7 @@ h4 {
   border-radius: 50%;
 }
 
-.operations__icon svg {
+.operations__icon img {
   height: 2.75rem;
   width: 2.75rem;
 }
@@ -508,13 +509,13 @@ h4 {
 .operations__icon--3 {
   background-color: var(--color-tertiary-opacity);
 }
-.operations__icon--1 svg {
+.operations__icon--1 img {
   fill: var(--color-primary-darker);
 }
-.operations__icon--2 svg {
+.operations__icon--2 img {
   fill: var(--color-secondary-darker);
 }
-.operations__icon--3 svg {
+.operations__icon--3 img {
   fill: var(--color-tertiary);
 }
 

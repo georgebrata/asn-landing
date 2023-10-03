@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ro">
   <head>
     <meta charset="UTF-8" />
@@ -15,11 +16,26 @@
     <link rel="stylesheet" href="queries.css" />
     <title>Sebastian Gabriel Nagy | Avocat Cluj</title>
 
-    <script defer="" src="script.js"></script>
+    <script defer src="script.js"></script>
     <script
       async=""
       src="https://static.hotjar.com/c/hotjar-3665471.js?sv=6"
     ></script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3665471, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
   </head>
 
   <body>
@@ -27,7 +43,7 @@
       <nav class="nav">
         <img
           src="img/logo.png"
-          alt="Bankist logo"
+          alt="Sebastian Gabriel Nagy | Avocat Cluj logo"
           class="nav__logo"
           id="logo"
           designer="Joe"
@@ -47,16 +63,7 @@
           </li>
         </ul>
         <button id="toggleButton-close">
-          <svg
-            class="btn-close__icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            id="menu"
-          >
-            <path
-              d="M12,7a2,2,0,1,0-2-2A2,2,0,0,0,12,7Zm0,10a2,2,0,1,0,2,2A2,2,0,0,0,12,17Zm0-7a2,2,0,1,0,2,2A2,2,0,0,0,12,10Z"
-            ></path>
-          </svg>
+          <img id="menu" src="./img/svgs/btn-close.svg" alt="close button" />
         </button>
         <ul class="nav__links nav__links-m nav__links-m--close">
           <li class="nav__item">
@@ -91,7 +98,7 @@
           </p>
         </div>
         <!-- <button class="btn--text btn--scroll-to">Mai mult &DownArrow;</button> -->
-        <button class="btn--show-modal btn--text">Contactează</button>
+        <a href="#contact" class="btn--scroll-to btn--text">Contactează</a>
 
         <!--TODO: smaller image, rounded borders -->
         <img
@@ -118,9 +125,7 @@
             </span>
           </p>
           <!-- <button class="btn--text btn--scroll-to">Mai mult &DownArrow;</button> -->
-          <a class="btn--text btn--show-modal btn--show-modal" href="#contact"
-            >Contactează</a
-          >
+          <a href="#contact" class="btn--scroll-to btn--text">Contactează</a>
         </div>
         <img
           src="img/hero.jpg"
@@ -153,11 +158,7 @@
         </div>
         <div class="operations__content operations__content--1">
           <div class="operations__icon operations__icon--1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-              <path
-                d="M12.971 352h32.394C67.172 454.735 181.944 512 288 512c106.229 0 220.853-57.38 242.635-160h32.394c10.691 0 16.045-12.926 8.485-20.485l-67.029-67.029c-4.686-4.686-12.284-4.686-16.971 0l-67.029 67.029c-7.56 7.56-2.206 20.485 8.485 20.485h35.146c-20.29 54.317-84.963 86.588-144.117 94.015V256h52c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-52v-5.47c37.281-13.178 63.995-48.725 64-90.518C384.005 43.772 341.605.738 289.37.01 235.723-.739 192 42.525 192 96c0 41.798 26.716 77.35 64 90.53V192h-52c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h52v190.015c-58.936-7.399-123.82-39.679-144.117-94.015h35.146c10.691 0 16.045-12.926 8.485-20.485l-67.029-67.029c-4.686-4.686-12.284-4.686-16.971 0L4.485 331.515C-3.074 339.074 2.28 352 12.971 352zM288 64c17.645 0 32 14.355 32 32s-14.355 32-32 32-32-14.355-32-32 14.355-32 32-32z"
-              ></path>
-            </svg>
+            <img src="./img/svgs/anchor.svg" alt="anchor" />
           </div>
           <h5 class="operations__header">
             Alegerea perfectă pentru a vă oferi asistență juridică de încredere
@@ -175,23 +176,7 @@
 
         <div class="operations__content operations__content--2">
           <div class="operations__icon operations__icon--2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              version="1.1"
-              x="0px"
-              y="0px"
-              viewBox="0 0 50 50"
-              style="enable-background: new 0 0 50 50"
-              xml:space="preserve"
-            >
-              <g id="Layer_1">
-                <path
-                  d="M14.482,39.691l4.982,9.371L25,39.474l5.536,9.589l4.982-9.371l10.606,0.371l-8.307-14.389l1.244-0.553l-0.467-4.477   L41.235,17l-2.641-3.644l0.468-4.477L34.95,7.05l-1.829-4.112l-4.477,0.467L25,0.765l-3.644,2.641l-4.477-0.468L15.05,7.05   l-4.112,1.829l0.467,4.477L8.765,17l2.641,3.644l-0.468,4.477l1.245,0.554L3.875,40.062L14.482,39.691z M35.98,26.492l6.608,11.446   l-8.25-0.289l-3.875,7.289l-4.309-7.464l3.887-6.733l0.955,0.1l2.124,0.222l1.829-4.113L35.98,26.492z M13.078,23.883l0.396-3.793   L11.235,17l2.239-3.09l-0.396-3.793l3.487-1.552l1.552-3.487l3.793,0.396L25,3.235l3.09,2.239l3.793-0.396l1.552,3.487l3.487,1.552   l-0.396,3.793L38.765,17l-2.239,3.09l0.396,3.793l-0.11,0.049v0l-3.377,1.503l-1.552,3.487l-3.793-0.396l0,0l0,0L25,30.765   l-3.09-2.239l-3.793,0.396l-1.552-3.487l-3.377-1.503v0L13.078,23.883z M16.879,31.062l4.477-0.467L25,33.235l2.223-1.611   l-3.377,5.85l0,0l-4.309,7.464l-3.875-7.289l-8.249,0.289l6.608-11.446l1.03,0.458L16.879,31.062z"
-                ></path>
-              </g>
-              <g></g>
-            </svg>
+            <img src="./img/svgs/award.svg" alt="award" srcset="" />
           </div>
           <h5 class="operations__header">
             Absolvent de top al Facultății de Drept din Cluj-Napoca
@@ -210,23 +195,7 @@
           class="operations__content operations__content--3 operations__content--active"
         >
           <div class="operations__icon operations__icon--3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              version="1.1"
-              x="0px"
-              y="0px"
-              viewBox="0 0 50 50"
-              style="enable-background: new 0 0 50 50"
-              xml:space="preserve"
-            >
-              <g id="Layer_1">
-                <path
-                  d="M45.281,25.915c4.949-5.004,4.949-13.146,0-18.15C42.881,5.337,39.688,4,36.292,4c-0.001,0-0.001,0-0.001,0   c-3.396,0-6.59,1.337-8.991,3.765L25,10.09l-2.3-2.325C20.299,5.337,17.106,4,13.709,4c-3.396,0-6.589,1.337-8.99,3.765   c-4.949,5.004-4.949,13.146,0,18.15L25,46.422L45.281,25.915z M6.141,9.171C8.163,7.126,10.852,6,13.709,6   c2.858,0,5.547,1.126,7.569,3.171L25,12.935l3.722-3.764C30.744,7.126,33.433,6,36.291,6c2.858,0,5.546,1.126,7.568,3.171   c4.183,4.229,4.183,11.109,0,15.338L25,43.578L6.141,24.509C1.958,20.28,1.958,13.399,6.141,9.171z"
-                ></path>
-              </g>
-              <g></g>
-            </svg>
+            <img src="./img/svgs/heart.svg" alt="heart" />
           </div>
           <h5 class="operations__header">
             Pasiune pentru justiție de calitate
@@ -253,14 +222,12 @@
         <img
           src="img/law-1.jpg"
           data-src="img/law-1.jpg"
-          alt="Computer"
+          alt="Avocat definitiv Cluj-Napoca Sebastian Nagy servicii"
           class="features__img"
         />
         <div class="features__feature">
           <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-monitor"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <h5 class="features__header">Drept Penal</h5>
           <p>
@@ -271,9 +238,7 @@
 
         <div class="features__feature">
           <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-trending-up"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <h5 class="features__header">Dreptul Familiei</h5>
           <p>
@@ -284,21 +249,19 @@
         <img
           src="img/law-2.jpg"
           data-src="img/law-2.jpg"
-          alt="Plant"
+          alt="Avocat definitiv Cluj-Napoca Sebastian Nagy servicii legale"
           class="features__img"
         />
 
         <img
           src="img/law-3.jpg"
           data-src="img/law-3.jpg"
-          alt="Credit card"
+          alt="Avocat definitiv Cluj-Napoca Sebastian Nagy servicii juridice"
           class="features__img"
         />
         <div class="features__feature">
           <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <h5 class="features__header">Drept Civil</h5>
           <p>
@@ -308,9 +271,7 @@
         </div>
         <div class="features__feature">
           <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <h5 class="features__header">Drept Contravențional</h5>
           <p>
@@ -320,9 +281,7 @@
         </div>
         <div class="features__feature">
           <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <h5 class="features__header">Dreptul Transporturilor</h5>
           <p>
@@ -332,9 +291,7 @@
         </div>
         <div class="features__feature">
           <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <h5 class="features__header">Asistare în materie contractuală</h5>
           <p>
@@ -344,9 +301,7 @@
         </div>
         <div class="features__feature">
           <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <h5 class="features__header">Reprezentare în materie contractuală</h5>
           <p>
@@ -359,14 +314,12 @@
         <img
           src="img/law-1--lazy.jpg"
           data-src="img/law-1.jpg"
-          alt="Computer"
+          alt="Avocat definitiv Cluj-Napoca Sebastian Nagy servicii legale si juridice"
           class="features__img features__img-m lazy-img"
         />
         <div class="features__feature features__feature-m">
           <div class="features__icon features__icon-m">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-monitor"></use>
-            </svg>
+            <img src="./img/svgs/gravel.svg" alt="court" />
           </div>
           <div class="features__deatail-cont">
             <h5 class="features__header">Cabinetul oferă servicii juridice</h5>
@@ -385,9 +338,7 @@
         />
         <div class="features__feature features__feature-m">
           <div class="features__icon features__icon-m">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-trending-up"></use>
-            </svg>
+            <img src="./img/svgs/justice.svg" alt="justice" />
           </div>
           <div class="features__deatail-cont">
             <h5 class="features__header">Drept Penal</h5>
@@ -401,15 +352,13 @@
         <img
           src="img/law-3--lazy.jpg"
           data-src="img/law-3.jpg"
-          alt="Credit card"
+          alt="Avocat definitiv Cluj-Napoca Sebastian Nagy servicii legale"
           class="features__img lazy-img"
         />
 
         <div class="features__feature features__feature-m">
           <div class="features__icon features__icon-m">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <div class="features__deatail-cont">
             <h5 class="features__header">Drept Civil</h5>
@@ -421,9 +370,7 @@
         </div>
         <div class="features__feature features__feature-m">
           <div class="features__icon features__icon-m">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <div class="features__deatail-cont">
             <h5 class="features__header">Drept Contravențional</h5>
@@ -435,9 +382,7 @@
         </div>
         <div class="features__feature features__feature-m">
           <div class="features__icon features__icon-m">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <div class="features__deatail-cont">
             <h5 class="features__header">Dreptul Familiei</h5>
@@ -449,9 +394,7 @@
         </div>
         <div class="features__feature features__feature-m">
           <div class="features__icon features__icon-m">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <div class="features__deatail-cont">
             <h5 class="features__header">Dreptul Transporturilor</h5>
@@ -463,9 +406,7 @@
         </div>
         <div class="features__feature features__feature-m">
           <div class="features__icon features__icon-m">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <div class="features__deatail-cont">
             <h5 class="features__header">Asistare în materie contractuală</h5>
@@ -477,9 +418,7 @@
         </div>
         <div class="features__feature features__feature-m">
           <div class="features__icon features__icon-m">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <img src="./img/svgs/court.svg" alt="court image" />
           </div>
           <div class="features__deatail-cont">
             <h5 class="features__header">
@@ -511,306 +450,6 @@
       </div>
 
       <div class="slider">
-        <!-- <div class="slide" style="transform: translateX(-800%)">
-          <div class="testimonial">
-            <div class="testimonial__details">
-              <span class="testimonial__date">04/02/2023</span>
-              <div classname="testimonial__tags">
-                <span class="testimonial__type">Interviu</span>
-              </div>
-            </div>
-            <h5 class="testimonial__header">
-              Interviu cu Sebastian Nagy, tânărul avocat care o apără pe
-              profesoara ironizată de propriii elevi în online
-            </h5>
-            <blockquote class="testimonial__text">
-              La începutul acestui an, un caz a oripilat opinia publică
-              clujeană. Este vorba despre cazul profesoarei din Cluj-Napoca care
-              a fost victima unor ironizări grosiere din partea elevilor.
-              Profesoara a obținut o prima victorie în instanța, iar dacă va
-              obține și victoria definitivă această urmează să primească
-              despăgubiri din partea părinților celor doi elevi implicați.
-            </blockquote>
-            <address class="testimonial__author">
-              <h6 class="testimonial__name"></h6>
-              <p class="testimonial__location">
-                <a
-                  class="location-link"
-                  href="https://curieruldecluj.ro/sebastian-nagy-tanarul-avocat-care-o-apara-pe-profesoara-ironizata-de-propriii-elevi-in-online-faptele-ilicite-comise-de-catre-parati-sunt-evidente"
-                  target="_blank"
-                  >Curierul de Cluj</a
-                >
-              </p>
-            </address>
-          </div>
-        </div>
-        <div class="slide" style="transform: translateX(-700%)">
-          <div class="testimonial">
-            <div class="testimonial__details">
-              <span class="testimonial__date">02/06/2023</span>
-              <div classname="testimonial__tags">
-                <span class="testimonial__type">Interviu</span>
-              </div>
-            </div>
-            <h5 class="testimonial__header">
-              Erorile statului rămân o realitate în România anului 2023
-            </h5>
-            <blockquote class="testimonial__text">
-              Astfel, după depunerea unei plângeri penale victimele trebuie de
-              cele mai multe ori să treacă printr-o perioadă lungă și frustrantă
-              de așteptare datorată printre altele neglijenței unor organe de
-              urmărire penală, dezinteresului acestora dar și lipsei de personal
-              cu care se confruntă sistemul judiciar român.
-            </blockquote>
-            <address class="testimonial__author">
-              <h6 class="testimonial__name"></h6>
-              <p class="testimonial__location">
-                <a
-                  class="location-link"
-                  href="https://curieruldecluj.ro/erorile-statului-raman-o-realitate-in-romania-anului-2023-avocatul-sebastian-nagy-pasivitatea-autoritatilor-este-datorata-si-neglijentei-sau-lipsei-de-interese"
-                  target="_blank"
-                  >Curierul de Cluj</a
-                >
-              </p>
-            </address>
-          </div>
-        </div>
-        <div class="slide" style="transform: translateX(-600%)">
-          <div class="testimonial">
-            <div class="testimonial__details">
-              <span class="testimonial__date">11/01/2023</span>
-              <div classname="testimonial__tags">
-                <span class="testimonial__type">Digi24</span>
-                <span class="testimonial__type">despăgubiri</span>
-              </div>
-            </div>
-            <h5 class="testimonial__header">
-              O profesoară din Cluj-Napoca, ironizată pe reţelele sociale de doi
-              elevi, a câştigat în instanţă despăgubiri de 30.000RON
-            </h5>
-            <blockquote class="testimonial__text">
-              O profesoară din Cluj-Napoca va încasa 30.000 lei de la părinţii a
-              doi foşti elevi, care au ironizat-o pe reţelele sociale. Copiii,
-              elevi în clasa a VII-a la acea vreme, au publicat pe un cont fals
-              de Facebook, dar şi pe grupul de WhatsApp al clasei imagini ce
-              ilustrau o maimuţă, menite să denigreze imaginea profesoarei. La
-              aproape 5 ani de atunci, Judecătoria Cluj-Napoca a admis că
-              onoarea şi reputaţia dascălului au avut de suferit, aşa că
-              părinţii celor doi elevi sunt acum buni de plată, scrie
-              clujust.ro.
-            </blockquote>
-            <address class="testimonial__author">
-              <h6 class="testimonial__name">Izabela Zaharia</h6>
-              <p class="testimonial__location">
-                <a
-                  class="location-link"
-                  href="https://www.digi24.ro/stiri/o-profesoara-din-cluj-napoca-ironizata-pe-retelele-sociale-de-doi-elevi-a-castigat-in-instanta-despagubiri-de-30-000-de-lei-2212163"
-                  target="_blank"
-                  >Digi24</a
-                >
-              </p>
-            </address>
-          </div>
-        </div>
-        <div class="slide" style="transform: translateX(-500%)">
-          <div class="testimonial">
-            <div class="testimonial__details">
-              <span class="testimonial__date">12/01/2023</span>
-              <div classname="testimonial__tags">
-                <span class="testimonial__type">Observator</span>
-                <span class="testimonial__type">despăgubiri</span>
-              </div>
-            </div>
-            <h5 class="testimonial__header">
-              Despăgubiri de 30.000 de lei pentru o profesoară din Cluj, după o
-              "glumă copilărească" făcută de doi elevi
-            </h5>
-            <blockquote class="testimonial__text">
-              O profesoară din Cluj-Napoca va încasa 30.000 de lei de la
-              părinţii a doi foşti elevi, care au ironizat-o pe reţelele
-              sociale. Cei doi copii ar fi postat pe internet poze cu profesoara
-              lor, pe care le-au modificat pentru a-i denigra imaginea. Sentința
-              vine la cinci ani de atunci. Părinţii buni de plată nu sunt de
-              acord cu decizia şi spun că totul a fost o glumă copilărească.
-            </blockquote>
-            <address class="testimonial__author">
-              <h6 class="testimonial__name">Redactia Observator</h6>
-              <p class="testimonial__location">
-                <a
-                  class="location-link"
-                  href="https://observatornews.ro/economic/despagubiri-de-30000-de-lei-pentru-o-profesoara-din-cluj-dupa-o-gluma-copilareasca-facuta-de-doi-elevi-506654.html"
-                  target="_blank"
-                  >Observator</a
-                >
-              </p>
-            </address>
-          </div>
-        </div>
-        <div class="slide" style="transform: translateX(-400%)">
-          <div class="testimonial">
-            <div class="testimonial__details">
-              <span class="testimonial__date">12/01/2023</span>
-              <div classname="testimonial__tags">
-                <span class="testimonial__type">ProTV</span>
-                <span class="testimonial__type">despăgubiri</span>
-              </div>
-            </div>
-            <h5 class="testimonial__header">
-              Profesoară din Cluj despăgubită cu 30.000 de lei pentru bullying
-              din partea a doi elevi. Părinții au mințit în instanță
-            </h5>
-            <blockquote class="testimonial__text">
-              Profesoara i-a dat în judecată pe cei doi copii și a cerut 50.000
-              de lei drept draune morale. Femeia a reclamat faptul că înaintea
-              începerii anului școlar 2018-2019 un elev dintr-o clasă la care
-              era profesoară și dirigintă, clasa a VII-a, a postat o caricatură
-              a sa pe un grup de Whatsapp, apoi a folosit-o ca imagine de grup,
-              iar apoi a distribuit-o și pe Facebook. Fapta s-a repetat în
-              decembrie 2018 cu o altă imagine, notează Clujjust.ro.
-            </blockquote>
-            <address class="testimonial__author">
-              <h6 class="testimonial__name">Andreea Ghinea</h6>
-              <p class="testimonial__location">
-                <a
-                  class="location-link"
-                  href="https://stirileprotv.ro/stiri/actualitate/profesoara-din-cluj-despagubita-cu-30-000-de-lei-pentru-bullying-din-partea-a-doi-elevi-parintii-au-mintit-in-instanta.html"
-                  target="_blank"
-                  >Știrile PROTV</a
-                >
-              </p>
-            </address>
-          </div>
-        </div>
-        <div class="slide" style="transform: translateX(-300%)">
-          <div class="testimonial">
-            <div class="testimonial__details">
-              <span class="testimonial__date">13/01/2023</span>
-              <div classname="testimonial__tags">
-                <span class="testimonial__type">Educație</span>
-                <span class="testimonial__type">despăgubiri</span>
-              </div>
-            </div>
-            <h5 class="testimonial__header">
-              Doi elevi de clasa a VII-a care au ironizat o profesoară pe
-              rețele, obligați să-i plătească 30.000 de lei
-            </h5>
-            <blockquote class="testimonial__text">
-              Doi elevi care în clasa a VII-a au ironizat pe reţelele de
-              socializare o profesoară sunt obligaţi de instanţă să îi plătească
-              acesteia 30.000 de lei. Mai exact, Judecătoria Cluj-Napoca a decis
-              că cei care trebuie să achite daunele sunt părinții celor doi
-              elevi, ca reprezentanţi legali.
-            </blockquote>
-            <address class="testimonial__author">
-              <h6 class="testimonial__name"></h6>
-              <p class="testimonial__location">
-                <a
-                  class="location-link"
-                  href="https://spotmedia.ro/stiri/educatie/doi-elevi-de-clasa-a-vii-a-care-au-ironizat-o-profesoara-pe-retele-obligati-de-instanta-sa-i-plateasca-30-000-de-lei"
-                  target="_blank"
-                  >Spot Media</a
-                >
-              </p>
-            </address>
-          </div>
-        </div>
-        <div class="slide" style="transform: translateX(-200%)">
-          <div class="testimonial">
-            <div class="testimonial__details">
-              <span class="testimonial__date">12/01/2023</span>
-              <div classname="testimonial__tags">
-                <span class="testimonial__type">Epoch Times</span>
-                <span class="testimonial__type">despăgubiri</span>
-              </div>
-            </div>
-            <h5 class="testimonial__header">
-              Profesoară câştigă daune morale de 30.000 lei de la părinţii unor
-              elevi care au batjocorit-o pe internet
-            </h5>
-            <blockquote class="testimonial__text">
-              Profesoara a cerut 50.000 de lei daune morale pentru atingere
-              adusă onoarei, demnităţii şi reputaţiei sale, după ce doi elevi
-              din clasa a VII-a pe care o conducea ca dirigintă, în Şcoala
-              gimnazială "Ion Agârbiceanu", au publicat pe Facebook şi,
-              respectiv pe grupul de WhatsApp al clasei, imagini ce ilustrau o
-              maimuţă, menite să o denigreze
-            </blockquote>
-            <address class="testimonial__author">
-              <h6 class="testimonial__name">Loredana Diacu</h6>
-              <p class="testimonial__location">
-                <a
-                  class="location-link"
-                  href="https://epochtimes-romania.com/news/profesoara-castiga-daune-morale-de-30-000-lei-de-la-parintii-unor-elevi-care-au-batjocorit-o-pe-internet---338940?fbclid=IwAR2c7vALYZ1u-ITWz_TRKopDCZVBlxvLx61QLThhsCSV529v6ywIqd9k-Hs"
-                  target="_blank"
-                  >Epoch Times</a
-                >
-              </p>
-            </address>
-          </div>
-        </div>
-        <div class="slide" style="transform: translateX(-100%)">
-          <div class="testimonial">
-            <div class="testimonial__details">
-              <span class="testimonial__date">11/01/2023</span>
-              <div classname="testimonial__tags">
-                <span class="testimonial__type">Antena3</span>
-                <span class="testimonial__type">despăgubiri</span>
-              </div>
-            </div>
-            <h5 class="testimonial__header">
-              Părinții a doi elevi trebuie să plătească daune în valoare de
-              30.000 de lei unei profesoare din Cluj
-            </h5>
-            <blockquote class="testimonial__text">
-              O profesoară din Cluj-Napoca a câştigat în instanţă despăgubiri de
-              la părinţii a doi foşti elevi, care au ironizat-o pe reţelele de
-              socializare
-            </blockquote>
-            <address class="testimonial__author">
-              <h6 class="testimonial__name">Silvia Preda</h6>
-              <p class="testimonial__location">
-                <a
-                  class="location-link"
-                  href="https://www.antena3.ro/actualitate/locale/profesoara-cluj-despagubiri-ironizata-de-elevi-662607.html"
-                  target="_blank"
-                  >Antena3</a
-                >
-              </p>
-            </address>
-          </div>
-        </div>
-        <div class="slide" style="transform: translateX(0%)">
-          <div class="testimonial">
-            <div class="testimonial__details">
-              <span class="testimonial__date">12/01/2023</span>
-              <div classname="testimonial__tags">
-                <span class="testimonial__type">Adevărul</span>
-                <span class="testimonial__type">Cluj</span>
-              </div>
-            </div>
-            <h5 class="testimonial__header">
-              O profesoară ironizată de doi elevi va primi 30.000 de lei de la
-              părinții acestora. De ce a decis astfel instanța
-            </h5>
-            <blockquote class="testimonial__text">
-              Judecătoria Cluj a soluționat un dosar, în urma căruia o
-              profesoară din Cluj va primi suma de 30.000 lei de la părinţii a
-              doi foşti elevi. Judecătorii clujeni au luat decizia considerând
-              că elevii au denigrat imaginea profesoarei, pe rețelele sociale.
-            </blockquote>
-            <address class="testimonial__author">
-              <h6 class="testimonial__name">Ştefan Lică</h6>
-              <p class="testimonial__location">
-                <a
-                  class="location-link"
-                  href="https://adevarul.ro/stiri-locale/cluj-napoca/motivul-pentru-care-parintii-unor-elevi-sunt-2234059.html"
-                  target="_blank"
-                  >Adevărul</a
-                >
-              </p>
-            </address>
-          </div>
-        </div> -->
         <div class="lds-ellipsis" style="display: none">
           <div></div>
           <div></div>
@@ -820,19 +459,7 @@
 
         <button class="slider__btn slider__btn--left">←</button>
         <button class="slider__btn slider__btn--right">→</button>
-        <div class="dots">
-          <!-- <button class="dots__dot" data-slide="0"></button
-          ><button class="dots__dot" data-slide="1"></button
-          ><button class="dots__dot" data-slide="2"></button
-          ><button class="dots__dot" data-slide="3"></button
-          ><button class="dots__dot" data-slide="4"></button
-          ><button class="dots__dot" data-slide="5"></button
-          ><button class="dots__dot" data-slide="6"></button
-          ><button class="dots__dot" data-slide="7"></button >--><button
-            class="dots__dot dots__dot--active"
-            data-slide="8"
-          ></button>
-        </div>
+        <div class="dots"></div>
       </div>
     </section>
 
@@ -857,34 +484,21 @@
           <h2 class="mt-2">Luni - Vineri 09:00 - 18:00</h2>
           <li class="address__location">
             <span class="contact-icon">
-              <svg
+              <img
                 class="address__icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 32 32"
-              >
-                <g data-name="User Home">
-                  <path
-                    d="M13 10.5V15h2v-2a1 1 0 0 1 2 0v2h2v-4.5l-3-2.25z"
-                  ></path>
-                  <path
-                    d="M16 1A12.014 12.014 0 0 0 4 13c0 6.418 10.834 17.252 11.295 17.71a1 1 0 0 0 1.41 0C17.166 30.251 28 19.417 28 13A12.014 12.014 0 0 0 16 1zm5 15a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1v-6a.998.998 0 0 1 .4-.8l4-3a1 1 0 0 1 1.2 0l4 3a.998.998 0 0 1 .4.8z"
-                  ></path>
-                </g>
-              </svg>
+                src="./img/svgs/contact.svg"
+                alt="contact"
+              />
             </span>
             <span>Piața Cipariu nr. 9, sc. 1, ap. 2, Cluj-Napoca</span>
           </li>
           <li class="address__mail">
             <span class="contact-icon">
-              <svg
+              <img
                 class="address__icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M22 5v4l-10 4L2 9V5a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1zM2 11.154V19a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-7.846l-10 4z"
-                ></path>
-              </svg>
+                src="./img/svgs/address.svg"
+                alt="address"
+              />
             </span>
             <span>
               <a class="mail-link" href="mailto:av.nagy.gs@gmail.com"
@@ -894,15 +508,11 @@
           </li>
           <li class="address__phone">
             <span class="contact-icon">
-              <svg
+              <img
                 class="address__icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z"
-                ></path>
-              </svg>
+                src="./img/svgs/phone.svg"
+                alt="phone"
+              />
             </span>
             <a class="footer-link" href="tel:+400722556665">0722 556 665</a>
           </li>
