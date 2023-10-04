@@ -1089,3 +1089,7 @@ textarea {
     transform: translate(24px, 0);
   }
 }
+
+.header__title {
+  margin-top: 11rem;
+}
