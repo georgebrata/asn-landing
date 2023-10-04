@@ -17,24 +17,17 @@
     <title>Sebastian Gabriel Nagy | Avocat Cluj</title>
 
     <script defer src="script.js"></script>
-    <script
-      async=""
-      src="https://static.hotjar.com/c/hotjar-3665471.js?sv=6"
-    ></script>
+
+    <!-- Hotjar Tracking Code for https://avocat-nagy-cluj.ro -->
     <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 3665471, hjsv: 6 };
-        a = o.getElementsByTagName('head')[0];
-        r = o.createElement('script');
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:3665471,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
   </head>
 
@@ -508,8 +501,8 @@
               />
             </span>
             <span>
-              <a class="mail-link" href="mailto:av.nagy.gs@gmail.com"
-                >av.nagy.gs@gmail.com</a
+              <a class="mail-link" href="mailto:contact@avocat-nagy-cluj.ro"
+                >contact@avocat-nagy-cluj.ro</a
               >
             </span>
           </li>
@@ -570,7 +563,7 @@
         <input
           type="hidden"
           name="_blacklist"
-          value="spammy pattern, banned term, naughty phrase"
+          value="test, naughty phrase"
         />
         <input type="text" name="_honey" style="display: none" />
         <input type="hidden" name="_template" value="table" />
@@ -582,73 +575,5 @@
       </form>
     </div>
     <div class="overlay hidden"></div>
-
-    <!-- Hotjar Tracking Code for https://avocat-nagy-cluj.ro -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 3665471, hjsv: 6 };
-        a = o.getElementsByTagName('head')[0];
-        r = o.createElement('script');
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
-    <!-- Code injected by live-server -->
-    <script>
-      // <![CDATA[  <-- For SVG support
-      if ('WebSocket' in window) {
-        (function () {
-          function refreshCSS() {
-            var sheets = [].slice.call(document.getElementsByTagName('link'));
-            var head = document.getElementsByTagName('head')[0];
-            for (var i = 0; i < sheets.length; ++i) {
-              var elem = sheets[i];
-              var parent = elem.parentElement || head;
-              parent.removeChild(elem);
-              var rel = elem.rel;
-              if (
-                (elem.href && typeof rel != 'string') ||
-                rel.length == 0 ||
-                rel.toLowerCase() == 'stylesheet'
-              ) {
-                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                elem.href =
-                  url +
-                  (url.indexOf('?') >= 0 ? '&' : '?') +
-                  '_cacheOverride=' +
-                  new Date().valueOf();
-              }
-              parent.appendChild(elem);
-            }
-          }
-          var protocol =
-            window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-          var address =
-            protocol + window.location.host + window.location.pathname + '/ws';
-          var socket = new WebSocket(address);
-          socket.onmessage = function (msg) {
-            if (msg.data == 'reload') window.location.reload();
-            else if (msg.data == 'refreshcss') refreshCSS();
-          };
-          if (
-            sessionStorage &&
-            !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')
-          ) {
-            console.log('Live reload enabled.');
-            sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-          }
-        })();
-      } else {
-        console.error(
-          'Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.'
-        );
-      }
-    </script>
   </body>
 </html>
