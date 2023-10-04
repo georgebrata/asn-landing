@@ -539,16 +539,21 @@
       <form
         class="modal__form"
         target="_blank"
-        action="https://formsubmit.co/bratageorge@gmail.com"
+        action="https://formsubmit.co/contact@avocat-nagy-cluj.ro"
         method="POST"
       >
-        <label>Nume</label>
-        <input required type="text" />
-        <label>Adresa de email</label>
-
-        <input required type="email" />
-        <label for="message">Mesaj</label>
-        <textarea required name="" id="" cols="30" rows="10"></textarea>
+        <label for="nume">Nume</label>
+        <input name="nume" required type="text" />
+        <label for="email">Adresa de email</label>
+        <input name="email" required type="email" />
+        <label for="mesaj">Mesaj</label>
+        <textarea
+          required
+          name="mesaj"
+          id="mesaj"
+          cols="30"
+          rows="10"
+        ></textarea>
         <button class="btn">Trimite →</button>
         <input
           type="hidden"
