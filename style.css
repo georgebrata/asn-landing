@@ -892,11 +892,13 @@ h4 {
   text-wrap: nowrap;
 }
 
-.modal__form input {
+.modal__form input, 
+.modal__form textarea  {
   font-size: 1.7rem;
   padding: 1rem 1.5rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
+  font-style: normal;
 }
 
 .modal__form button {
@@ -1092,4 +1094,25 @@ textarea {
 
 .header__title {
   margin-top: 11rem;
+}
+
+.text-center {
+  text-align: center;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mt-5 {
+  margin-top: 5rem;
+}
+.mt-10 {
+  margin-top: 10rem;
+}
+.fireworks {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute;
 }
