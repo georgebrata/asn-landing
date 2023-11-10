@@ -16,15 +16,24 @@
   <meta property="og:url" content="https://avocat-nagy-cluj.ro/" />
   <meta property="og:title" content="Sebastian Gabriel Nagy | Avocat Cluj-Napoca" />
   <meta property="og:description" content="Adaptabilitate la nevoile clientului, transparență, atenție la detalii și expertiză de înaltă calitate." />
-  <meta property="og:image" content="https://i.ibb.co/b3fyZLZ/Avocat-Sebastian-Garbiel-Nagy-Cover.png" />
+  <meta property="og:image" content="https://i.ibb.co/TRq9xWn/Avocat-definitiv-cluj-napoca-sebastian-gabriel-nagy.png" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://avocat-nagy-cluj.ro/" />
   <meta property="twitter:title" content="Sebastian Gabriel Nagy | Avocat Cluj-Napoca" />
   <meta property="twitter:description" content="Adaptabilitate la nevoile clientului, transparență, atenție la detalii și expertiză de înaltă calitate." />
-  <meta property="twitter:image" content="https://i.ibb.co/b3fyZLZ/Avocat-Sebastian-Garbiel-Nagy-Cover.png" />
+  <meta property="twitter:image" content="https://i.ibb.co/TRq9xWn/Avocat-definitiv-cluj-napoca-sebastian-gabriel-nagy.png" />
   <meta name="author" content="George Brata">
+
+  <!--FAVICON-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#25274d">
+  <meta name="msapplication-TileColor" content="#25274d">
+  <meta name="theme-color" content="#25274d">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -33,7 +42,6 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="queries.css" />
-  <title>Sebastian Gabriel Nagy | Avocat Cluj</title>
 
   <script defer src="script.js"></script>
 
@@ -48,12 +56,21 @@
       a.appendChild(r);
     })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
   </script>
+  <script>
+    function toggleProfilePic() {
+      if(document.getElementById("profile").src.includes("img/avocat-sebastian-gabriel-nagyy.png")) {
+        document.getElementById("profile").src = "img/avocat-sebastian-gabriel-nagy.png"
+      } else {
+        document.getElementById("profile").src = "img/avocat-sebastian-gabriel-nagyy.png"
+      }
+    }
+  </script>
 </head>
 
 <body>
   <header class="header">
     <nav class="nav">
-      <img src="img/logo.png" alt="Sebastian Gabriel Nagy | Avocat Cluj logo" class="nav__logo" id="logo" designer="Joe"
+      <img src="img/logo-dark.png" alt="Sebastian Gabriel Nagy | Avocat Cluj logo" class="nav__logo" id="logo" designer="Joe"
         data-version-number="3.0" />
       <ul class="nav__links">
         <li class="nav__item">
@@ -62,7 +79,7 @@
         <li class="nav__item">
           <a class="nav__link" href="#servicii">Servicii</a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item special">
           <a class="nav__link nav__link--btn btn--show-modal" href="#contact">Contact</a>
         </li>
       </ul>
@@ -103,7 +120,7 @@
       <button class="btn btn--show-modal">Trimite mesaj</button>
 
       <!--TODO: smaller image, rounded borders -->
-      <img src="img/hero.jpg" class="header__img"
+      <img src="img/avocat-sebastian-gabriel-nagyy.png" id="profile" onclick="toggleProfilePic()" class="header__img"
         alt="Avocat Sebastian Nagy imagine profil | Avocat definitiv Cluj-Napoca" />
     </div>
 
@@ -124,9 +141,10 @@
           </span>
         </p>
         <!-- <button class="btn--text btn--scroll-to">Mai mult &DownArrow;</button> -->
-        <a href="#contact" class="btn--scroll-to btn--text">Contactează</a>
+        <button class="btn btn--show-modal">Trimite mesaj</button>
+
       </div>
-      <img src="img/hero.jpg" class="header__img"
+      <img src="img/avocat-sebastian-gabriel-nagyy.png" class="header__img"
         alt="Avocat Sebastian Nagy imagine profil | Avocat definitiv Cluj-Napoca" />
     </div>
   </header>
@@ -140,7 +158,7 @@
     <div class="operations">
       <div class="operations__tab-container">
         <button class="btn operations__tab operations__tab--1" data-tab="1">
-          Determinare
+          Tenacitate
         </button>
         <button class="btn operations__tab operations__tab--2" data-tab="2">
           Abilitate
@@ -154,13 +172,12 @@
           <img src="./img/svgs/anchor.svg" alt="anchor" />
         </div>
         <h5 class="operations__header">
-          Alegerea perfectă pentru a vă oferi asistență juridică de încredere
+          Tenacitatea este melodia disciplinei în simfonia adversității
         </h5>
         <p>
-          De la momentul înființării și până în prezent am demonstrat prin
-          numeroasele reușite profesionale și clienți mulțumiți faptul că
+          Numeroasele reușite profesionale recomandă faptul că
           oferim servicii juridice de înaltă calitate în diverse ramuri ale
-          dreptului. Astfel, determinarea și accentul deosebit pus pe nevoile
+          dreptului. Determinarea, accentul deosebit pus pe nevoile
           și interesele clienților precum și vastele cunoștințe juridice sunt
           doar câteva dintre atributele care ne definesc munca și ne recomanda
           pentru o colaborare încununată de succes.
@@ -193,9 +210,9 @@
         </h5>
         <p>
           Pasiunea pentru un act de justiție de calitate l-a împins pe
-          Sebastian Nagy sa fie prezent în mod constant în presa locală și
-          națională, contribuind cu expertiza sa la educația juridică a
-          intregii societati.
+          Sebastian să fie prezent în mod constant în presa locală și
+          națională, contribuind constant cu expertiza sa la educația juridică a
+          întregii societăți.
         </p>
       </div>
     </div>
@@ -480,9 +497,14 @@
 
   <footer class="footer">
     <p class="copyright">
-      <span id="copyrightYear">2023</span> © Avocat Sebastian Gabriel Nagy
+      <span id="copyrightYear">2023</span> © Avocat Sebastian Gabriel Nagy. 
     </p>
+
     <img src="img/logo.png" alt="Avocat Sebastian Gabriel Nagy Cluj-Napoca logo" class="footer__logo" />
+    
+    <p class="copyright">
+      creat cu ❤️ de  <a href="https://solon-agency.ro" class="color-secondary" target="_blank">Solon</a>
+    </p>
   </footer>
 
   <div class="modal hidden">

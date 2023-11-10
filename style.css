@@ -61,6 +61,18 @@ a:visited {
 
   transition: transform 1s, opacity 1s, -webkit-transform 1s;
 }
+.color-primary {
+  color: var(--color-primary);
+}
+.color-secondary {
+  color: var(--color-secondary);
+}
+.nav .special {
+  display: none;
+}
+.nav.sticky .special {
+  display: block;
+}
 
 .section--hidden {
   opacity: 0;
@@ -197,7 +209,7 @@ img {
 }
 
 .nav__logo {
-  height: 4.5rem;
+  height: 6rem;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -237,8 +249,8 @@ img {
 .nav__link--btn:visited {
   padding: 0.8rem 2.5rem !important;
   border-radius: 3rem;
-  background-color: var(--color-secondary);
-  color: #222;
+  background-color: var(--color-primary);
+  color: white;
 }
 
 .nav__link--btn:hover,
@@ -501,10 +513,10 @@ h4 {
 }
 
 .operations__icon--1 {
-  background-color: var(--color-secondary-opacity);
+  background-color: var(--color-primary-opacity);
 }
 .operations__icon--2 {
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-secondary-opacity);
 }
 .operations__icon--3 {
   background-color: var(--color-tertiary-opacity);

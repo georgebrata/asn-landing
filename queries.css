@@ -437,7 +437,8 @@
   /* Style for the toggle button */
   #toggleButton-close {
     display: inline-block;
-    background-color: var(--color-primary);
+    background-color: transparent;
+    fill: red;
     border: none;
     outline: none;
     border: none;
@@ -447,7 +448,7 @@
     width: 3rem;
   }
   #toggleButton-close .btn-close__icon {
-    fill: var(--color-secondary);
+    fill: var(--color-primary);
   }
 
   .nav.sticky {
@@ -545,7 +546,8 @@
 
   .btn--show-modal {
     font-size: 1.4rem !important;
-    padding: 1rem 0 0.3rem 0 !important;
+    margin-top: 1rem;
+    padding: 1rem !important;
   }
 
   .operations__tab--1 {
