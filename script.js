@@ -174,6 +174,7 @@ function renderTestimonialUi(data) {
         if (el !== link) el.style.opacity = this;
       });
       logo.style.opacity = this;
+      console.log('aaa')
     }
   };
 
