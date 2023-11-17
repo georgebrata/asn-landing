@@ -59,7 +59,8 @@ a:visited {
   color: white;
 }
 .hover-underline:hover {
-  text-decoration: underline !important
+  text-decoration: underline !important;
+  color: white;
 }
 .color-secondary {
   color: var(--color-secondary);
