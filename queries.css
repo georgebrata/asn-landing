@@ -171,6 +171,17 @@
     width: 90%;
     display: inline-block;
   }
+
+  #abordare {
+    padding: 2rem;
+  }
+  #abordare .section__header {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  #abordare p {
+    max-width: 100%;
+  }
 }
 
 /* CSS styles for extra small screens */
@@ -282,12 +293,12 @@
     margin-bottom: 3rem;
   }
   h4 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
   }
 
   .section {
-    padding: 5rem 2rem;
+    padding: 9rem 2rem 4rem 2rem;
   }
   .section__header {
     font-size: 2.5rem;
@@ -425,7 +436,7 @@
     margin-left: 0rem;
   }
   .nav__links-m .nav__link {
-    color: var(--color-secondary);
+    color: var(--color-primary);
   }
   .nav__links-m .nav__link--btn {
     color: var(--color-primary);
@@ -444,7 +455,6 @@
   #toggleButton-close {
     display: inline-block;
     background-color: transparent;
-    fill: red;
     border: none;
     outline: none;
     border: none;
@@ -454,7 +464,7 @@
     width: 3rem;
   }
   #toggleButton-close .btn-close__icon {
-    fill: var(--color-primary);
+    fill: var(--color-secondary);
   }
 
   .nav.sticky {
@@ -580,7 +590,6 @@
 
   .modal__form {
     margin: 0 0rem;
-    display: block;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -webkit-box-align: baseline;

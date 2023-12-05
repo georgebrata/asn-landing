@@ -5,7 +5,7 @@
   --color-primary-darker: #1a1c3a;
   --color-secondary-darker: #e4cc3a;
   --color-tertiary-darker: #fd424b;
-  --color-primary-opacity: rgba(37, 39, 77, 0.5);
+  --color-primary-opacity: rgba(37, 39, 77, 0.8);
   --color-secondary-opacity: #ffcd0380;
   --color-tertiary-opacity: #ff58602d;
   --gradient-primary: linear-gradient(to top left, #25274d, #1a1c3a);
@@ -41,16 +41,22 @@ a:visited {
 /* GENERAL ELEMENTS */
 .section {
   padding: 7rem 3rem;
-
   -webkit-transition: opacity 1s, -webkit-transform 1s;
-
   transition: opacity 1s, -webkit-transform 1s;
-
   -o-transition: transform 1s, opacity 1s;
-
   transition: transform 1s, opacity 1s;
-
   transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+#abordare {
+  padding: 7rem 10rem;
+}
+#abordare .section__title {
+  text-align: center !important;
+}
+#abordare p {
+  padding: 0;
+  max-width: 80%;
+  margin: 0 auto;
 }
 .color-primary {
   color: var(--color-primary);
@@ -127,7 +133,7 @@ a:visited {
 }
 
 .btn:hover {
-  /* background-color: var(--color-secondary-darker); */
+  background-color: var(--color-secondary-darker);
 }
 
 .btn--text {
@@ -201,22 +207,35 @@ img {
   padding: 0 6rem;
   z-index: 100;
 }
+nav #toggleButton-close .light {
+  display: none;
+}
+nav #toggleButton-close .dark {
+  display: block;
+}
 
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
   top: 0;
   background-color: var(--color-primary);
+}
 
-  .nav__link {
-    color: #f3f3f3 !important;
-  }
-  .nav__link--btn {
-    color: var(--color-primary);
-    background-color: var(--color-secondary);
-    position: relative;
-    color: var(--color-primary) !important;
-  }
+.nav.sticky .nav__link, .nav__links-m .nav__link {
+  color: #f3f3f3 !important;
+}
+.nav.sticky .nav__link--btn, .nav__links-m .nav__link--btn {
+  color: var(--color-primary) !important;
+  background-color: var(--color-secondary) !important;
+  position: relative;
+  color: var(--color-primary) !important;
+} 
+
+nav.sticky #toggleButton-close .light {
+  display: block;
+}
+nav.sticky #toggleButton-close .dark {
+  display: none;
 }
 
 .nav__logo {
@@ -254,6 +273,7 @@ img {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  color: var(--color-primary);
 }
 
 .nav__link--btn:link,
@@ -456,6 +476,10 @@ h4 {
 .operations__tab--3 {
   background-color: var(--color-tertiary);
   margin: 0;
+}
+
+.operations__tab--1:hover {
+  background-color: var(--color-primary-darker);
 }
 
 .operations__tab--3:hover {
@@ -865,7 +889,7 @@ h4 {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  max-width: 60rem;
+  max-width: 100%;
   background-color: #f3f3f3;
   padding: 5rem 6rem;
   -webkit-box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
