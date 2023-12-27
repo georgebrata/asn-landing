@@ -1,5 +1,3 @@
-'use strict';
-
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
@@ -45,7 +43,7 @@ const fetchTestimonial = fetchUrl => {
     .then(data => {
       hideSpinner();
       // Use the data from the API
-      renderTestimonialUi(data?.presa);
+      renderTestimonialUi(data);
     })
     .catch(error => {
       // Handle errors
@@ -54,9 +52,8 @@ const fetchTestimonial = fetchUrl => {
     });
 };
 
-fetchTestimonial(
-  'https://api.sheety.co/06def408e74850aef0fbd22a79539f9f/asn/presa'
-);
+const URL = "https://script.google.com/macros/s/AKfycbzhOtNnbKc47y8EBx6CGF6lZE5Ar3Ge30svU0k5HAUF8JYFzoDxbOY8KHLtF0NWiiohTg/exec";
+fetchTestimonial(URL.concat('?path=presa'));
 
 function renderTestimonialUi(data) {
   if (!data) return;
