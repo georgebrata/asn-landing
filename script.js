@@ -43,6 +43,7 @@ const fetchTestimonial = fetchUrl => {
     .then(data => {
       hideSpinner();
       // Use the data from the API
+      console.log(data);
       renderTestimonialUi(data);
     })
     .catch(error => {
@@ -60,42 +61,44 @@ function renderTestimonialUi(data) {
 
   data.forEach(data => {
     const {
-      datăArticol: date,
-      ['tags (separatePrinVirgulă)']: tags,
-      titluArticol: title,
-      descriereScurtăArticol: desc,
-      numeJurnalist: name,
-      numeZiar: newspaper,
-      linkArticol: link,
+      ['dată articol']: date,
+      ['tags (separate prin virgulă)']: tags,
+      ['titlu Articol']: title,
+      ['descriere scurtă articol']: desc,
+      ['nume jurnalist']: name,
+      ['nume ziar']: newspaper,
+      ['link articol']: link,
+      ['afisează pe website?']: visible
     } = data;
 
-    const divEl = document.createElement('div');
-    divEl.classList.add('slide');
-    const slideEl = `
-        
-          <div class="testimonial">
-  <div class="testimonial__details">
-    <span class="testimonial__date">${date}</span>
-    <div className="testimonial__tags">
-    ${tags
-      .split(',')
-      .map(item => `<span class="testimonial__type">${item.trim()}</span>`)
-      .join(' ')}
-      </div>
-  </div>
-  <h5 class="testimonial__header">${title}</h5>
-  <blockquote class="testimonial__text">
-    ${desc}
-  </blockquote>
-  <address class="testimonial__author">
-    <h6 class="testimonial__name">${name}</h6>
-    <p class="testimonial__location"><a class="location-link" href=${link} target="_blank">${newspaper}</a></p>
-  </address>
-</div> 
-  `;
-    // console.log(divEl.className);
-    divEl.innerHTML = slideEl;
-    slideContainer.prepend(divEl);
+    if(visible) {
+      const divEl = document.createElement('div');
+      divEl.classList.add('slide');
+      const slideEl = `
+      <div class="testimonial">
+        <div class="testimonial__details">
+          <span class="testimonial__date">${new Date(date).toLocaleDateString('ro')}</span>
+          <div className="testimonial__tags">
+          ${tags
+            .split(',')
+            .map(item => `<span class="testimonial__type">${item.trim()}</span>`)
+            .join(' ')}
+            </div>
+        </div>
+        <h5 class="testimonial__header">${title}</h5>
+        <blockquote class="testimonial__text">
+          ${desc}
+        </blockquote>
+        <address class="testimonial__author">
+          <h6 class="testimonial__name">${name}</h6>
+          <p class="testimonial__location"><a class="location-link" href=${link} target="_blank">${newspaper}</a></p>
+        </address>
+    </div> 
+    `;
+      // console.log(divEl.className);
+      divEl.innerHTML = slideEl;
+      slideContainer.prepend(divEl);
+    }
   });
 
   const openModal = function (e) {

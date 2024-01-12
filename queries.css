@@ -39,7 +39,7 @@
   }
   .operations__content {
     font-size: 2rem;
-    padding: 2.5rem 7rem 6.5rem 7rem;
+    padding: 2.5rem 1rem 1.5rem 1rem;
   }
   .features__header {
     font-size: 1.6rem;
@@ -317,7 +317,7 @@
 
   .operations__content {
     font-size: 2rem;
-    padding: 0rem 0rem 0rem 0rem;
+    padding: 2rem;
   }
 
   .operations__icon {
