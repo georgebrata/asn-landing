@@ -109,12 +109,16 @@
   /* .modal {
     width: 64rem;
   } */
+
 }
 
 /* CSS styles for small screens */
 @media (max-width: 767.98px) {
   /* Add your CSS styles for small screens here */
 
+  .modal {
+    padding: 3rem 4rem;
+  }
   h1 {
     font-size: 2.5rem;
     line-height: 1.35;
@@ -590,7 +594,7 @@
 
   .modal__form {
     margin: 0 0rem;
-    -ms-grid-columns: 1fr;
+    /* -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
@@ -599,8 +603,11 @@
     -ms-flex-line-pack: distribute;
     align-content: space-around;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -ms-flex-pack: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .modal__form input {
