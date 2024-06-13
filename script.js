@@ -43,7 +43,7 @@ const fetchTestimonial = fetchUrl => {
     .then(data => {
       hideSpinner();
       // Use the data from the API
-      console.log(data);
+      // console.log(data);
       renderTestimonialUi(data);
     })
     .catch(error => {
@@ -174,7 +174,6 @@ function renderTestimonialUi(data) {
         if (el !== link) el.style.opacity = this;
       });
       logo.style.opacity = this;
-      console.log('aaa')
     }
   };
 

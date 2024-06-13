@@ -1197,3 +1197,76 @@ textarea {
   height: 100vh !important;
   position: absolute;
 }
+
+/* LIMBI */
+
+.limbi{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.limbi img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.limbi .cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.limbi .cards_item {
+  display: flex;
+  padding: 1rem;
+  width: 20%;
+  margin: 1%;
+}
+
+@media (min-width: 20rem) {
+  .limbi .cards_item {
+    width: 25%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 50rem) {
+  .limbi .cards_item {
+    width: 15%;
+    margin: 5%;
+  }
+}
+
+.limbi .card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.limbi .language__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+/* .limbi .card img {
+  -webkit-filter: brightness(99%) contrast(99%) blur(1px) grayscale(1%);
+  filter: brightness(99%) contrast(99%) blur(1px) grayscale(1%);
+} */
+
+.mt-1 {
+  margin-top: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
