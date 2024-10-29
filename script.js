@@ -12,12 +12,12 @@ const slideContainer = document.querySelector('.slider');
 const spinner = document.querySelector('.lds-ellipsis');
 
 function showSpinner() {
-  return (spinner.style.display = 'block');
+  return (spinner?.style.display = 'block');
 }
 
 // Function to hide the spinner
 function hideSpinner() {
-  return (spinner.style.display = 'none');
+  return (spinner?.style.display = 'none');
 }
 
 ///////////////////////////////////////
