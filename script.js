@@ -1,7 +1,6 @@
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
-const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const btnScrollTo = document.querySelectorAll('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 const nav = document.querySelector('.nav');
@@ -10,359 +9,6 @@ const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 const slideContainer = document.querySelector('.slider');
 const spinner = document.querySelector('.lds-ellipsis');
-
-function showSpinner() {
-  return (spinner?.style.display = 'block');
-}
-
-// Function to hide the spinner
-function hideSpinner() {
-  return (spinner?.style.display = 'none');
-}
-
-///////////////////////////////////////
-// Modal window
-
-showSpinner();
-
-const fetchTestimonial = fetchUrl => {
-  showSpinner();
-
-  fetch(fetchUrl)
-    .then(response => {
-      showSpinner();
-      // Check if the response status is OK (200).
-      if (!response?.ok) {
-        throw new Error(
-          `Network response was not ok, status: ${response.status}`
-        );
-      }
-      // Parse the JSON response
-      return response?.json?.();
-    })
-    .then(data => {
-      hideSpinner();
-      // Use the data from the API
-      // console.log(data);
-      renderTestimonialUi(data);
-    })
-    .catch(error => {
-      // Handle errors
-      hideSpinner();
-      console.error('Fetch error:', error);
-    });
-};
-
-const URL = "https://script.google.com/macros/s/AKfycbzhOtNnbKc47y8EBx6CGF6lZE5Ar3Ge30svU0k5HAUF8JYFzoDxbOY8KHLtF0NWiiohTg/exec";
-fetchTestimonial(URL.concat('?path=presa'));
-
-function renderTestimonialUi(data) {
-  if (!data) return;
-
-  data.forEach(data => {
-    const {
-      ['dată articol']: date,
-      ['tags (separate prin virgulă)']: tags,
-      ['titlu Articol']: title,
-      ['descriere scurtă articol']: desc,
-      ['nume jurnalist']: name,
-      ['nume ziar']: newspaper,
-      ['link articol']: link,
-      ['afisează pe website?']: visible
-    } = data;
-
-    if(visible) {
-      const divEl = document.createElement('div');
-      divEl.classList.add('slide');
-      const slideEl = `
-      <div class="testimonial">
-        <div class="testimonial__details">
-          <span class="testimonial__date">${new Date(date).toLocaleDateString('ro')}</span>
-          <div className="testimonial__tags">
-          ${tags
-            .split(',')
-            .map(item => `<span class="testimonial__type">${item.trim()}</span>`)
-            .join(' ')}
-            </div>
-        </div>
-        <h5 class="testimonial__header">${title}</h5>
-        <blockquote class="testimonial__text">
-          ${desc}
-        </blockquote>
-        <address class="testimonial__author">
-          <h6 class="testimonial__name">${name}</h6>
-          <p class="testimonial__location"><a class="location-link" href=${link} target="_blank">${newspaper}</a></p>
-        </address>
-    </div> 
-    `;
-      // console.log(divEl.className);
-      divEl.innerHTML = slideEl;
-      slideContainer.prepend(divEl);
-    }
-  });
-
-  const openModal = function (e) {
-    e.preventDefault();
-    modal.classList.remove('hidden');
-    overlay.classList.remove('hidden');
-  };
-
-  const closeModal = function () {
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');
-  };
-
-  btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
-
-  btnCloseModal.addEventListener('click', closeModal);
-  overlay.addEventListener('click', closeModal);
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-      closeModal();
-    }
-  });
-
-  ///////////////////////////////////////
-  // Button scrolling
-  btnScrollTo.forEach(btn =>
-    btn.addEventListener('click', function (e) {
-      section1.scrollIntoView({ behavior: 'smooth' });
-    })
-  );
-  document.querySelector('.nav__links').addEventListener('click', function (e) {
-    e.preventDefault();
-
-    // Matching strategy
-    if (e.target.classList.contains('nav__link')) {
-      const id = e.target.getAttribute('href');
-      document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-
-  ///////////////////////////////////////
-  // Tabbed component
-
-  tabsContainer.addEventListener('click', function (e) {
-    const clicked = e.target.closest('.operations__tab');
-
-    // Guard clause
-    if (!clicked) return;
-
-    // Remove active classes
-    tabs.forEach(t => t.classList.remove('operations__tab--active'));
-    tabsContent.forEach(c => c.classList.remove('operations__content--active'));
-
-    // Activate tab
-    clicked.classList.add('operations__tab--active');
-
-    // Activate content area
-    document
-      .querySelector(`.operations__content--${clicked.dataset.tab}`)
-      .classList.add('operations__content--active');
-  });
-
-  ///////////////////////////////////////
-  // Menu fade animation
-  const handleHover = function (e) {
-    if (e.target.classList.contains('nav__link')) {
-      const link = e.target;
-      const siblings = link.closest('.nav').querySelectorAll('.nav__link');
-      const logo = link.closest('.nav').querySelector('img');
-
-      siblings.forEach(el => {
-        if (el !== link) el.style.opacity = this;
-      });
-      logo.style.opacity = this;
-    }
-  };
-
-  // Passing "argument" into handler
-  nav.addEventListener('mouseover', handleHover.bind(0.5));
-  nav.addEventListener('mouseout', handleHover.bind(1));
-
-  ///////////////////////////////////////
-  // Sticky navigation: Intersection Observer API
-
-  const header = document.querySelector('.header');
-  const navHeight = nav.getBoundingClientRect().height;
-
-  const stickyNav = function (entries) {
-    const [entry] = entries;
-
-    if (!entry.isIntersecting) nav.classList.add('sticky');
-    else nav.classList.remove('sticky');
-  };
-
-  const headerObserver = new IntersectionObserver(stickyNav, {
-    root: null,
-    threshold: 0,
-    rootMargin: `-${navHeight}px`,
-  });
-
-  headerObserver.observe(header);
-
-  ///////////////////////////////////////
-  // Reveal sections
-  const allSections = document.querySelectorAll('.section');
-
-  const revealSection = function (entries, observer) {
-    const [entry] = entries;
-
-    if (!entry.isIntersecting) return;
-
-    entry.target.classList.remove('section--hidden');
-    observer.unobserve(entry.target);
-  };
-
-  const sectionObserver = new IntersectionObserver(revealSection, {
-    root: null,
-    threshold: 0.15,
-  });
-
-  allSections.forEach(function (section) {
-    sectionObserver.observe(section);
-    section.classList.add('section--hidden');
-  });
-
-  // Lazy loading images
-  const imgTargets = document.querySelectorAll('img[data-src]');
-
-  const loadImg = function (entries, observer) {
-    const [entry] = entries;
-
-    if (!entry.isIntersecting) return;
-
-    // Replace src with data-src
-    entry.target.src = entry.target.dataset.src;
-
-    entry.target.addEventListener('load', function () {
-      entry.target.classList.remove('lazy-img');
-    });
-
-    observer.unobserve(entry.target);
-  };
-
-  const imgObserver = new IntersectionObserver(loadImg, {
-    root: null,
-    threshold: 0,
-    rootMargin: '200px',
-  });
-
-  imgTargets.forEach(img => imgObserver.observe(img));
-
-  /////////////////////////////////////
-
-  const slider = function () {
-    const slides = slideContainer.querySelectorAll('.slide');
-    const btnLeft = document.querySelector('.slider__btn--left');
-    const btnRight = document.querySelector('.slider__btn--right');
-    const dotContainer = document.querySelector('.dots');
-
-    let curSlide = 0;
-    const maxSlide = slides.length;
-
-    // Functions
-    const createDots = function () {
-      slides.forEach(function (_, i) {
-        dotContainer.insertAdjacentHTML(
-          'beforeend',
-          `<button class="dots__dot" data-slide="${i}"></button>`
-        );
-      });
-    };
-
-    const activateDot = function (slide) {
-      document
-        .querySelectorAll('.dots__dot')
-        .forEach(dot => dot.classList.remove('dots__dot--active'));
-
-      document
-        .querySelector(`.dots__dot[data-slide="${slide}"]`)
-        .classList.add('dots__dot--active');
-    };
-
-    const goToSlide = function (slide) {
-      slides.forEach(
-        (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
-      );
-    };
-
-    // Next slide
-    const nextSlide = function () {
-      if (curSlide === maxSlide - 1) {
-        curSlide = 0;
-      } else {
-        curSlide++;
-      }
-
-      goToSlide(curSlide);
-      activateDot(curSlide);
-    };
-
-    const prevSlide = function () {
-      if (curSlide === 0) {
-        curSlide = maxSlide - 1;
-      } else {
-        curSlide--;
-      }
-      goToSlide(curSlide);
-      activateDot(curSlide);
-    };
-
-    const init = function () {
-      goToSlide(0);
-      createDots();
-
-      activateDot(0);
-    };
-    init();
-
-    // Event handlers
-    btnRight.addEventListener('click', nextSlide);
-    btnLeft.addEventListener('click', prevSlide);
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowLeft') prevSlide();
-      e.key === 'ArrowRight' && nextSlide();
-    });
-
-    dotContainer.addEventListener('click', function (e) {
-      if (e.target.classList.contains('dots__dot')) {
-        const { slide } = e.target.dataset;
-        goToSlide(slide);
-        activateDot(slide);
-      }
-    });
-  };
-  slider();
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  const toggleButton = document.getElementsByClassName('toggleButton');
-
-  const hiddenContent = document.querySelectorAll('.hidden-text');
-  const [content1, content2] = [...hiddenContent];
-
-  [...toggleButton].forEach(btn =>
-    btn.addEventListener('click', function () {
-      if (
-        content2.classList.contains('hidden-text') ||
-        content1.classList.remove('hidden-text')
-      ) {
-        content2.classList.remove('hidden-text');
-        content1.classList.remove('hidden-text');
-        btn.textContent = 'Read Less';
-        dot.style.display = 'none';
-      } else {
-        content2.classList.add('hidden-text');
-        content1.classList.add('hidden-text');
-        btn.textContent = 'Read More';
-        dot.style.display = 'inline';
-      }
-    })
-  );
-});
 
 const menu = document.querySelector('.nav__links-m');
 const toggleButton = document.getElementById('toggleButton-close');
@@ -416,3 +62,248 @@ const copyrightYearElement = document.getElementById('copyrightYear');
 if (copyrightYearElement) {
   copyrightYearElement.textContent = currentYear;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel__track');
+  let cards = Array.from(track.children);
+  const btnNext = document.querySelector('.carousel__btn--right');
+  const btnPrev = document.querySelector('.carousel__btn--left');
+
+  const firstClone = cards[0].cloneNode(true);
+  const lastClone = cards[cards.length - 1].cloneNode(true);
+
+  firstClone.classList.add('clone');
+  lastClone.classList.add('clone');
+
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, cards[0]);
+
+  cards = Array.from(track.children);
+  let currentIndex = 1;
+  let cardWidth = cards[0].offsetWidth;
+
+  const setPosition = () => {
+    track.style.transition = 'none';
+    track.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
+  };
+
+  const moveToIndex = index => {
+    track.style.transition = 'transform 0.4s ease-in-out';
+    track.style.transform = `translateX(-${cardWidth * index}px)`;
+  };
+
+  const updateWidth = () => {
+    cardWidth = cards[0].offsetWidth;
+    setPosition();
+  };
+
+  setPosition();
+
+  btnNext.addEventListener('click', () => {
+    if (currentIndex >= cards.length - 1) return;
+    currentIndex++;
+    moveToIndex(currentIndex);
+  });
+
+  btnPrev.addEventListener('click', () => {
+    if (currentIndex <= 0) return;
+    currentIndex--;
+    moveToIndex(currentIndex);
+  });
+
+  track.addEventListener('transitionend', () => {
+    if (cards[currentIndex].classList.contains('clone')) {
+      track.style.transition = 'none';
+      if (currentIndex === cards.length - 1) {
+        currentIndex = 1;
+      } else if (currentIndex === 0) {
+        currentIndex = cards.length - 2;
+      }
+      setPosition();
+    }
+  });
+
+  // ✅ Autoplay
+  let autoSlide = setInterval(() => {
+    currentIndex++;
+    moveToIndex(currentIndex);
+  }, 5000);
+
+  const stopAutoplay = () => clearInterval(autoSlide);
+  const restartAutoplay = () => {
+    stopAutoplay();
+    autoSlide = setInterval(() => {
+      currentIndex++;
+      moveToIndex(currentIndex);
+    }, 3000);
+  };
+
+  btnNext.addEventListener('click', restartAutoplay);
+  btnPrev.addEventListener('click', restartAutoplay);
+
+  // ✅ Touch / swipe support
+  let startX = 0;
+  let endX = 0;
+
+  track.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener('touchend', e => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  const handleSwipe = () => {
+    const deltaX = startX - endX;
+    if (Math.abs(deltaX) > 50) {
+      if (deltaX > 0) {
+        currentIndex++;
+      } else {
+        currentIndex--;
+      }
+      moveToIndex(currentIndex);
+      restartAutoplay();
+    }
+  };
+
+  window.addEventListener('resize', updateWidth);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const slideContainer = document.querySelector('.slider');
+  const spinner = document.querySelector('.lds-ellipsis');
+
+  const showSpinner = () => (spinner.style.display = 'block');
+  const hideSpinner = () => (spinner.style.display = 'none');
+
+  const URL =
+    'https://script.google.com/macros/s/AKfycbzhOtNnbKc47y8EBx6CGF6lZE5Ar3Ge30svU0k5HAUF8JYFzoDxbOY8KHLtF0NWiiohTg/exec';
+
+  fetchTestimonial(URL + '?path=presa');
+
+  function fetchTestimonial(fetchUrl) {
+    showSpinner();
+
+    fetch(fetchUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Network error: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        hideSpinner();
+        renderTestimonialUi(data);
+      })
+      .catch(err => {
+        hideSpinner();
+        console.error('Fetch error:', err);
+      });
+  }
+
+  function renderTestimonialUi(data) {
+    if (!data) return;
+
+    data.forEach(item => {
+      const {
+        ['dată articol']: date,
+        ['tags (separate prin virgulă)']: tags,
+        ['titlu Articol']: title,
+        ['descriere scurtă articol']: desc,
+        ['nume jurnalist']: name,
+        ['nume ziar']: newspaper,
+        ['link articol']: link,
+        ['afisează pe website?']: visible
+      } = item;
+
+      if (!visible) return;
+
+      const divEl = document.createElement('div');
+      divEl.classList.add('slide');
+      divEl.innerHTML = `
+        <div class="testimonial">
+          <div class="testimonial__details">
+            <span class="testimonial__date">${new Date(date).toLocaleDateString('ro')}</span>
+            <div class="testimonial__tags">
+              ${tags
+                .split(',')
+                .map(tag => `<span class="testimonial__type">${tag.trim()}</span>`)
+                .join(' ')}
+            </div>
+          </div>
+          <h5 class="testimonial__header">${title}</h5>
+          <blockquote class="testimonial__text">${desc}</blockquote>
+          <address class="testimonial__author">
+            <h6 class="testimonial__name">${name}</h6>
+            <p class="testimonial__location"><a class="location-link" href="${link}" target="_blank">${newspaper}</a></p>
+          </address>
+        </div>
+      `;
+      slideContainer.prepend(divEl);
+    });
+
+    slider(); // initialize slider after adding slides
+  }
+
+  function slider() {
+    const slides = document.querySelectorAll('.slide');
+    const btnLeft = document.querySelector('.slider__btn--left');
+    const btnRight = document.querySelector('.slider__btn--right');
+    const dotContainer = document.querySelector('.dots');
+
+    let curSlide = 0;
+    const maxSlide = slides.length;
+
+    const goToSlide = slide =>
+      slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`));
+
+    const nextSlide = () => {
+      curSlide = curSlide === maxSlide - 1 ? 0 : curSlide + 1;
+      goToSlide(curSlide);
+      activateDot(curSlide);
+    };
+
+    const prevSlide = () => {
+      curSlide = curSlide === 0 ? maxSlide - 1 : curSlide - 1;
+      goToSlide(curSlide);
+      activateDot(curSlide);
+    };
+
+    const createDots = () => {
+      slides.forEach((_, i) => {
+        dotContainer.insertAdjacentHTML(
+          'beforeend',
+          `<button class="dots__dot" data-slide="${i}"></button>`
+        );
+      });
+    };
+
+    const activateDot = slide => {
+      document.querySelectorAll('.dots__dot').forEach(dot => dot.classList.remove('dots__dot--active'));
+      document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add('dots__dot--active');
+    };
+
+    const init = () => {
+      goToSlide(0);
+      createDots();
+      activateDot(0);
+    };
+    init();
+
+    btnRight.addEventListener('click', nextSlide);
+    btnLeft.addEventListener('click', prevSlide);
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
+    });
+
+    dotContainer.addEventListener('click', e => {
+      if (e.target.classList.contains('dots__dot')) {
+        const { slide } = e.target.dataset;
+        goToSlide(+slide);
+        activateDot(+slide);
+      }
+    });
+  }
+});

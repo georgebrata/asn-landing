@@ -92,8 +92,11 @@
         <li class="nav__item">
           <a class="nav__link" href="#servicii">Servicii</a>
         </li>
-        <li class="nav__item special">
-          <a class="nav__link nav__link--btn btn--show-modal" href="#contact">Contact</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#presa">Articole</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#contact">Contact</a>
         </li>
       </ul>
       <button id="toggleButton-close">
@@ -106,6 +109,9 @@
         </li>
         <li class="nav__item">
           <a class="nav__link" href="#servicii">Servicii</a>
+        </li>
+                <li class="nav__item">
+          <a class="nav__link" href="#presa">Articole</a>
         </li>
         <li class="nav__item">
           <a class="nav__link nav__link--btn btn--show-modal" href="#contact">Contact</a>
@@ -128,7 +134,7 @@
         </p>
       </div>
       <!-- <button class="btn--text btn--scroll-to">Mai mult &DownArrow;</button> -->
-      <button class="btn btn--show-modal">Contactează-mă</button>
+       <a href="tel:++40742891577"><button class="btn">Contactează-mă</button></a>
 
       <!--TODO: smaller image, rounded borders -->
       <img src="img/avocat-sebastian-gabriel-nagy-cluj-napoca.png" id="profile" class="header__img"
@@ -150,7 +156,7 @@
           </span> -->
         </p>
         <!-- <button class="btn--text btn--scroll-to">Mai mult &DownArrow;</button> -->
-        <button class="btn btn--show-modal">Contactează-mă</button>
+        <a href="tel:++40742891577"><button class="btn">Contactează-mă</button></a>
 
       </div>
       <img src="img/avocat-sebastian-gabriel-nagy-cluj-napoca.png" class="header__img"
@@ -165,63 +171,51 @@
       </h3>
     </div>
 
-    <div class="operations">
-      <div class="operations__tab-container">
-        <button class="btn operations__tab operations__tab--1 operations__tab--active" data-tab="1">
-          Tenacitate
-        </button>
-        <button class="btn operations__tab operations__tab--2" data-tab="2">
-          Abilitate
-        </button>
-        <button class="btn operations__tab operations__tab--3" data-tab="3">
-          Pasiune
-        </button>
-      </div>
-      <div class="operations__content operations__content--1 operations__content--active">
-        <div class="operations__icon operations__icon--1">
+    <div class="carousel">
+  <button class="carousel__btn carousel__btn--left">←</button>
+  <div class="carousel__track-container">
+    <ul class="carousel__track">
+      <li class="carousel__card">
+        <div class="carousel__icon operations__icon operations__icon--1">
           <img src="./img/svgs/anchor.svg" alt="anchor" />
         </div>
-        <h5 class="operations__header">
-          Puterea de a depăși obstacole și de a persista în ciuda dificultăților întâlnite
-        </h5>
-        <p>
+        <h5 class="carousel__title">Puterea de a depăși obstacole și de a persista în ciuda dificultăților întâlnite</h5>
+        <p class="carousel__text">
           Determinarea, accentul deosebit pus pe nevoile și interesele clienților precum și vastele
           cunoștințe juridice sunt doar câteva dintre atributele care îmi definesc munca
           și mă recomandă pentru o colaborare încununată de succes. Totodată, numeroasele
           reușite profesionale atestă faptul că serviciile juridice oferite clienților mei sunt de cea
           mai înaltă calitate.
         </p>
-      </div>
-
-      <div class="operations__content operations__content--2">
-        <div class="operations__icon operations__icon--2">
-          <img src="./img/svgs/award.svg" alt="award" srcset="" />
+      </li>
+      <li class="carousel__card">
+        <div class="carousel__icon operations__icon operations__icon--2">
+          <img src="./img/svgs/award.svg" alt="award" />
         </div>
-        <h5 class="operations__header">
-          Competența de a utiliza instrumentele corecte
-        </h5>
-        <p>
+        <h5 class="carousel__title">Competența de a utiliza instrumentele corecte</h5>
+        <p class="carousel__text">
           Cu o fundație solidă în drept și o pasiune pentru justiție, am dezvoltat un set
           variat de abilități în domeniul juridic. Experiența mea bogată în diverse arii de
           drept, analiza cazurilor și prezentarea argumentelor juridice consider că mă
           definește ca un profesionist dedicat și pregătit să abordez provocările din
           acest domeniu complex.
         </p>
-      </div>
-      <div class="operations__content operations__content--3">
-        <div class="operations__icon operations__icon--3">
+      </li>
+      <li class="carousel__card">
+        <div class="carousel__icon operations__icon operations__icon--3">
           <img src="./img/svgs/heart.svg" alt="heart" />
         </div>
-        <h5 class="operations__header">
-          Pasiune pentru justiție de calitate
-        </h5>
-        <p>
+        <h5 class="carousel__title">Pasiune pentru justiție de calitate</h5>
+        <p class="carousel__text">
           Dedicația mea pentru justiție m-a impulsionat mereu să mă autodepășesc, lucru care a avut un ecou și în presa
           locală și națională. Astfel, prin aceste apariții am avut ocazia de a împărtăși expertiza mea juridică și de a
           contribui într-o mică măsură la o mai bună înțelegere a domeniului dreptului.
         </p>
-      </div>
-    </div>
+      </li>
+    </ul>
+  </div>
+  <button class="carousel__btn carousel__btn--right">→</button>
+</div>
 
   </section>
 
@@ -466,7 +460,7 @@
     </div>
   </section>
 
-  <section class="section section--sign-up">
+  <!-- <section class="section section--sign-up">
     <div class="section__title">
       <h3 class="section__header">
         Contact
@@ -484,16 +478,16 @@
         </a>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <!-- <section class="section" id="presa">
+  <section class="section" id="presa">
     <div class="section__title section__title--testimonials">
       <h2 class="section__description">Vezi ce spun și alții</h2>
-      <h3 class="section__header">Apariții presă</h3>
+      <h3 class="section__header">Articole</h3>
     </div>
 
     <div class="slider">
-      <div class="lds-ellipsis" style="display: none">
+      <div class="lds-ellipsis">
         <div></div>
         <div></div>
         <div></div>
@@ -504,7 +498,7 @@
       <button class="slider__btn slider__btn--right">→</button>
       <div class="dots"></div>
     </div>
-  </section> -->
+  </section>
 
   <section class="section" id="contact">
     <div class="operations">
@@ -530,7 +524,7 @@
             <img class="address__icon" src="./img/svgs/address.svg" alt="address" />
           </span>
           <span>
-            <a class="mail-link" href="mailto:contact@avocat-nagy-cluj.ro">contact@avocat-nagy-cluj.ro</a>
+            <a class="mail-link" href="mailto:av.nagy.gs@gmail.com">av.nagy.gs@gmail.com</a>
           </span>
         </li>
         <li class="address__phone">
@@ -550,7 +544,6 @@
       </div>
       <div class="contact-buttons">
         <div>
-          <button class="btn btn--show-modal">Trimite-mi mesaj</button>
           <a href="tel:++40742891577"><button class="btn">Sună-mă</button></a>
         </div>
         <div>
@@ -579,7 +572,7 @@
     </p>
   </footer>
 
-  <div class="modal hidden">
+  <!-- <div class="modal hidden">
     <button class="btn--close-modal">×</button>
     <h2 class="modal__header">
       Trimite <span class="highlight">mesaj</span>
@@ -601,7 +594,7 @@
       <textarea required name="mesaj" id=""></textarea>
       <button class="btn">Trimite →</button>
     </form>
-  </div>
+  </div> -->
   <div class="overlay hidden"></div>
 </body>
 
