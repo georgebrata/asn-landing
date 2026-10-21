@@ -44,15 +44,12 @@ jobs:
           dry-run: true
           timeout: 60000
           # A custom exclude replaces the action defaults, so those defaults are repeated here.
-          # Dotfiles are excluded so they are neither uploaded nor deleted on the server.
+          # .DS_Store, .vscode, and .prettierrc are not excluded: they are in the
+          # sync state and absent locally, so the deploy can delete them.
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
             **/.env*
-            **/.DS_Store
-            .vscode/**
-            .prettierrc
             .ftp-deploy-sync-state.json
-            **/.*
-            **/.*/**
+            **/.ftp-deploy-sync-state.json

@@ -25,6 +25,8 @@ id_ecdsa
 sitemanager.xml
 filezilla.xml
 
-# macOS metadata
+# macOS metadata and local editor files (also removed from the server by deploy)
 .DS_Store
+.vscode/
+.prettierrc
 
