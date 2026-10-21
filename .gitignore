@@ -15,5 +15,16 @@ ftp-sync.json
 # Private keys
 *.pem
 *.key
+*.ppk
+*.p12
 id_rsa
 id_ed25519
+id_ecdsa
+
+# Local FTP client session files
+sitemanager.xml
+filezilla.xml
+
+# macOS metadata
+.DS_Store
+
