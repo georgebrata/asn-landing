@@ -1,20 +1,24 @@
 # PROD Workflow for avocat-nagy-cluj.ro
 name: CI Main -> avocat-nagy-cluj.ro
 
-# Controls when the workflow will run
+# Deploy only after a merge to main. Pull requests (including forks)
+# and manual dispatch must not run this job or receive deploy secrets.
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [main]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+# Queue deploys so two FTP syncs never overlap.
+concurrency:
+  group: ftp-deploy-avocat-nagy-cluj
+  cancel-in-progress: false
+
+permissions:
+  contents: read
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   cd:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -24,7 +28,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       - name: Setup node env
         uses: actions/setup-node@v3.7.0
@@ -32,6 +36,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: deploy
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftp.avocat-nagy-cluj.ro
