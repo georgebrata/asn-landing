@@ -137,6 +137,13 @@ a:visited {
   background-color: var(--color-secondary-darker);
 }
 
+/* Anchors use the same button metrics. Buttons do not inherit line-height. */
+a.btn {
+  color: ButtonText;
+  line-height: normal;
+  text-align: center;
+}
+
 .btn--text {
   display: inline-block;
   background: none;
