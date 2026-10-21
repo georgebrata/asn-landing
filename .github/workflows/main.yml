@@ -43,9 +43,16 @@ jobs:
           # Set dry-run to false after that run succeeds.
           dry-run: true
           timeout: 60000
+          # A custom exclude replaces the action defaults, so those defaults are repeated here.
+          # Dotfiles are excluded so they are neither uploaded nor deleted on the server.
           exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.env*
             **/.DS_Store
             .vscode/**
             .prettierrc
             .ftp-deploy-sync-state.json
-            .git*/**
+            **/.*
+            **/.*/**
