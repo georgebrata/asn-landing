@@ -1,11 +1,12 @@
 # PROD Workflow for avocat-nagy-cluj.ro
 name: CI Main -> avocat-nagy-cluj.ro
 
-# Deploy only after a merge to main. Pull requests (including forks)
-# and manual dispatch must not run this job or receive deploy secrets.
+# Deploy only from main: a push after merge, or a manual dispatch on main.
+# Pull requests, including forks, must not run this job or receive deploy secrets.
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 # Queue deploys so two FTP syncs never overlap.
 concurrency:
@@ -15,31 +16,31 @@ concurrency:
 permissions:
   contents: read
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   cd:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
-
-      - name: Setup node env
-        uses: actions/setup-node@v3.7.0
         with:
-          node-version: ${{ matrix.node }}
+          persist-credentials: false
 
       - name: deploy
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+        uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
         with:
           server: ftp.avocat-nagy-cluj.ro
           username: deploy@avocat-nagy-cluj.ro
           password: ${{secrets.FTP_PASSWORD}}
           local-dir: ./
+          timeout: 60000
+          exclude: |
+            **/.DS_Store
+            .vscode/**
+            .prettierrc
+            .ftp-deploy-sync-state.json
+            .git*/**
