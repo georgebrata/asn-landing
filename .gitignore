@@ -1,0 +1,32 @@
+# Local FTP / SFTP client config (may contain credentials)
+.vscode/sftp.json
+sftp.json
+ftp-sync.json
+.ftpconfig
+.ftppass
+.ftp-deploy-sync-state.json
+**/.ftp-deploy-sync-state.json
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Private keys
+*.pem
+*.key
+*.ppk
+*.p12
+id_rsa
+id_ed25519
+id_ecdsa
+
+# Local FTP client session files
+sitemanager.xml
+filezilla.xml
+
+# macOS metadata and local editor files (also removed from the server by deploy)
+.DS_Store
+.vscode/
+.prettierrc
+
