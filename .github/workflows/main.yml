@@ -33,10 +33,15 @@ jobs:
         if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
         with:
-          server: ftp.avocat-nagy-cluj.ro
+          server: glc38.hostico.ro
           username: deploy@avocat-nagy-cluj.ro
           password: ${{secrets.FTP_PASSWORD}}
+          protocol: ftps
+          security: strict
           local-dir: ./
+          # First post-merge run validates FTPS and prints the sync plan only.
+          # Set dry-run to false after that run succeeds.
+          dry-run: true
           timeout: 60000
           exclude: |
             **/.DS_Store
